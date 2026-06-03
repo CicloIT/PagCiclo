@@ -1,0 +1,321 @@
+{
+  "proyecto": {
+    "titulo": "El Proyecto",
+    "descripcion": "Monitoreo Inteligente de Fauna Invasiva",
+    "intro": "Un proyecto innovador que combina tecnología IoT y conservación ambiental para abordar el problema de los jabalíes invasivos en Argentina",
+    "problema": {
+      "titulo": "El Problema",
+      "p1": "Los jabalíes fueron introducidos en Argentina desde Europa en la década de 1900 para cotos de caza deportiva.",
+      "p2": "Tras escapar de estos recintos, se han convertido en una de las especies invasivas más problemáticas del país, causando:",
+      "lista": [
+        "Daños severos a cultivos agrícolas",
+        "Destrucción de ecosistemas nativos",
+        "Competencia con fauna autóctona",
+        "Erosión del suelo por hozado",
+        "Transmisión de enfermedades"
+      ]
+    },
+    "solucion": {
+      "titulo": "Nuestra Solución",
+      "p1": "Desarrollamos un sistema de monitoreo inteligente que utiliza tecnología LoRaWAN para rastrear y estudiar poblaciones de jabalíes.",
+      "p2": "Nuestro enfoque combina:",
+      "lista": [
+        "Sensores IoT de bajo consumo energético",
+        "Cámaras infrarrojas para detección nocturna",
+        "Red LoRaWAN de largo alcance",
+        "Análisis de datos en tiempo real",
+        "Alertas automáticas para gestión"
+      ],
+      "final": "Proporcionando datos científicos para estrategias de control efectivas."
+    },
+    "caracteristicas": {
+      "titulo": "Características del Proyecto",
+      "monitoreo_preciso": {
+        "titulo": "Monitoreo Preciso",
+        "descripcion": "Detección y seguimiento de poblaciones de jabalíes en tiempo real usando sensores avanzados."
+      },
+      "tecnologia_lorawan": {
+        "titulo": "Tecnología LoRaWAN",
+        "descripcion": "Red de largo alcance y bajo consumo energético para comunicación en áreas remotas."
+      },
+      "camaras_infrarrojas": {
+        "titulo": "Cámaras Infrarrojas",
+        "descripcion": "Captura de imágenes nocturnas para identificación y conteo de especímenes."
+      },
+      "analisis_datos": {
+        "titulo": "Análisis de Datos",
+        "descripcion": "Procesamiento inteligente de información para toma de decisiones informadas."
+      }
+    },
+    "objetivos": {
+      "titulo": "Objetivos del Proyecto",
+      "investigacion": {
+        "titulo": "Investigación Científica",
+        "descripcion": "Generar datos científicos sobre comportamiento, distribución y patrones de movimiento"
+      },
+      "mapeo": {
+        "titulo": "Mapeo de Poblaciones",
+        "descripcion": "Identificar zonas de mayor concentración y rutas de desplazamiento"
+      },
+      "gestion": {
+        "titulo": "Gestión Efectiva",
+        "descripcion": "Proporcionar herramientas para estrategias de control basadas en evidencia"
+      }
+    }
+  },
+  "impacto": {
+    "titulo": "Impacto y Beneficios del Proyecto",
+    "ambiental": {
+      "titulo": "Impacto Ambiental",
+      "conservacion": {
+        "titulo": "Conservación de Ecosistemas",
+        "descripcion": "Protección de la flora y fauna nativa mediante el control informado de especies invasivas."
+      },
+      "restauracion": {
+        "titulo": "Restauración de Hábitats",
+        "descripcion": "Recuperación de áreas degradadas por la actividad de jabalíes invasivos."
+      },
+      "biodiversidad": {
+        "titulo": "Biodiversidad",
+        "descripcion": "Preservación de especies autóctonas amenazadas por la competencia con jabalíes."
+      }
+    },
+    "cientifico": {
+      "titulo": "Contribución Científica",
+      "investigacion": {
+        "titulo": "Investigación",
+        "items": [
+          "Datos sobre patrones de comportamiento y migración",
+          "Análisis de densidad poblacional por zonas",
+          "Estudios de impacto en ecosistemas locales"
+        ]
+      },
+      "innovacion": {
+        "titulo": "Innovación Tecnológica",
+        "items": [
+          "Aplicación de IoT en conservación",
+          "Desarrollo de algoritmos de detección",
+          "Metodologías de monitoreo remoto"
+        ]
+      }
+    },
+    "economico": {
+      "titulo": "Impacto Económico y Social",
+      "agricola": {
+        "titulo": "Sector Agrícola",
+        "items": [
+          "Reducción de pérdidas en cultivos",
+          "Protección de infraestructura rural",
+          "Mejora en la productividad agrícola",
+          "Disminución de costos de control"
+        ]
+      },
+      "rural": {
+        "titulo": "Comunidades Rurales",
+        "items": [
+          "Capacitación en nuevas tecnologías",
+          "Generación de empleos especializados",
+          "Fortalecimiento de la economía local",
+          "Desarrollo de turismo científico"
+        ]
+      }
+    },
+    "instalacion": {
+      "titulo": "Implementación en Campo",
+      "alt": "Sensor instalado en campo",
+      "descripcion": "Los sensores Milesight se instalan estratégicamente en zonas de tránsito de jabalíes, proporcionando datos continuos sobre la actividad de la fauna en su hábitat natural. La tecnología LoRaWAN permite el monitoreo remoto sin interferir con el comportamiento natural de los animales."
+    }
+  },
+  "tecnologia": {
+    "titulo": "Tecnología Utilizada",
+    "gateway": {
+      "titulo": "Gateway LoRaWAN",
+      "alt": "Gateway RAK7289",
+      "nombre": "WisGate RAK7289",
+      "caracteristicas": [
+        "Gateway LoRaWAN de 8 canales",
+        "Alcance de hasta 15 km en campo abierto",
+        "Conectividad 4G/WiFi/Ethernet",
+        "Resistente a condiciones climáticas extremas"
+      ]
+    },
+    "sensores": {
+      "titulo": "Sensores Milesight",
+      "sensor_principal": {
+        "alt": "Sensor Milesight IoT Principal",
+        "nombre": "Sensor IoT Principal",
+        "descripcion": "Detección de movimiento y monitoreo ambiental",
+        "caracteristicas": [
+          "Detección PIR de alta sensibilidad",
+          "Sensores de temperatura y humedad",
+          "Batería de larga duración (2+ años)",
+          "Transmisión LoRaWAN"
+        ]
+      },
+      "sensor_compacto": {
+        "alt": "Sensor Milesight Compacto",
+        "nombre": "Sensor Compacto",
+        "descripcion": "Monitoreo discreto y eficiente",
+        "caracteristicas": [
+          "Diseño compacto y resistente",
+          "Fácil instalación en campo",
+          "Comunicación bidireccional",
+          "Configuración remota"
+        ]
+      }
+    },
+    "lorawan": {
+      "titulo": "¿Por qué LoRaWAN?",
+      "ventajas_titulo": "Ventajas Técnicas",
+      "ventajas": [
+        "Largo alcance (hasta 15 km)",
+        "Bajo consumo energético",
+        "Penetración en vegetación densa",
+        "Red escalable y flexible"
+      ],
+      "beneficios_titulo": "Beneficios del Proyecto",
+      "beneficios": [
+        "Monitoreo en áreas remotas",
+        "Instalación sin infraestructura",
+        "Mantenimiento mínimo",
+        "Datos en tiempo real"
+      ]
+    },
+    "starlink": {
+      "titulo": "Conectividad Satelital - Starlink",
+      "alt": "Antena Starlink en campo abierto",
+      "beneficios": [
+        "Internet de alta velocidad en zonas rurales y remotas",
+        "Baja latencia para transmisión de datos IoT",
+        "Configuración sencilla y rápida implementación"
+      ],
+      "alt_img": "Equipo Starlink instalado"
+    },
+    "infrarojo": {
+      "titulo": "Cámaras Infrarrojas",
+      "alt": "Cámara infrarroja para monitoreo",
+      "beneficios": [
+        "Visión nocturna y detección térmica",
+        "Ideal para monitoreo 24/7 en exteriores",
+        "Integración con red LoRa o Wi-Fi"
+      ],
+      "alt_img": "Imagen de cámara infrarroja"
+    }
+  },
+  "recursos": {
+    "titulo": "Recursos Educativos y Documentación",
+    "youtube": [
+      {
+        "title": "Entre el riesgo ambiental y el negocio millonario: la realidad detrás de la caza de jabalíes en Cba",
+        "description": "Documental sobre cómo los jabalíes se convirtieron en una especie invasiva en Argentina",
+        "channel": "Canal 12 Córdoba"
+      },
+      {
+        "title": "¿Por qué se autorizó la caza deportiva de JABALÍES?",
+        "description": "Explicación de cómo funciona la tecnología LoRaWAN en aplicaciones de conservación",
+        "channel": "Canal 12 Córdoba"
+      },
+      {
+        "title": "Invasión de jabalíes en Argentina",
+        "description": "Demostración práctica de los sensores IoT utilizados en el proyecto",
+        "channel": "Canal 13 Río Cuarto"
+      },
+      {
+        "title": "JABALÍES PROVOCAN DAÑOS Y DESTROZOS EN VARIAS LOCALIDADES DEL VALLE DE CALAMUCHITA",
+        "description": "Tutorial sobre la configuración del gateway LoRaWAN",
+        "channel": "Telefe Córdoba"
+      }
+    ],
+    "imagenes": {
+      "titulo": "Impacto y problemática del jabalí en imágenes",
+      "descripcion": "La expansión del jabalí hacia áreas urbanas y rurales representa uno de los desafíos de conservación más complejos de la actualidad.",
+      "alt1": "Jabalí nocturno",
+      "texto1": "Los accidentes de tránsito por colisión con jabalíes son una problemática creciente en rutas argentinas y europeas.",
+      "alt2": "Cartel informativo Madrid",
+      "texto2": "Campañas urbanas advierten sobre los riesgos del jabalí en ciudades: daños, enfermedades y accidentes.",
+      "alt3": "Información sobre riesgos del jabalí",
+      "texto3": "El jabalí representa riesgos sanitarios, económicos y de seguridad vial en entornos urbanos y rurales.",
+      "alt4": "Accidente vial con jabalí",
+      "texto4": "Jabalí captado por cámara trampa en ambiente natural. Su actividad nocturna dificulta el control y monitoreo tradicional."
+    },
+    "enlaces": {
+      "titulo": "Enlaces de Interés",
+      "tecnica": "Documentación Técnica",
+      "tecnica_links": [
+        {
+          "href": "https://www.youtube.com/results?search_query=lorawan+technology+tutorial",
+          "label": "Guías de Tecnología LoRaWAN"
+        },
+        {
+          "href": "https://www.youtube.com/results?search_query=milesight+sensors+setup",
+          "label": "Configuración de Sensores Milesight"
+        },
+        {
+          "href": "https://docs.rakwireless.com/product-categories/wisgate/rak7289/quickstart/",
+          "label": "Manual del Gateway RAK7289"
+        }
+      ],
+      "jabali": "Información sobre Jabalíes",
+      "jabali_links": [
+        {
+          "href": "https://www.youtube.com/results?search_query=jabali+argentina+invasion+especies",
+          "label": "Documentales sobre Especies Invasivas"
+        },
+        {
+          "href": "https://www.milesight.com/resources/support/online-demo#iot-cloud",
+          "label": "Tecnologías de Monitoreo de Fauna"
+        },
+        {
+          "href": "https://www.milesight.com/",
+          "label": "IoT Sensores"
+        }
+      ]
+    },
+    "contacto": {
+      "titulo": "¿Interesado en el Proyecto?",
+      "descripcion": "Si deseas conocer más sobre la implementación de este sistema de monitoreo o colaborar en futuras investigaciones, no dudes en contactarnos.",
+      "telefono": "3584314857",
+      "email": "info@cicloit.com"
+    }
+  },
+  "footer": {
+    "descripcion": "Proyecto innovador de monitoreo de fauna invasiva utilizando tecnología IoT y redes de comunicación de largo alcance.",
+    "proyecto": {
+      "titulo": "El Proyecto",
+      "items": [
+        "Monitoreo de jabalíes invasivos",
+        "Conservación de ecosistemas",
+        "Investigación científica",
+        "Tecnología sustentable"
+      ]
+    },
+    "tecnologia": {
+      "titulo": "Tecnología",
+      "items": [
+        "Sensores Milesight IoT",
+        "Gateway RAK7289 LoRaWAN",
+        "Cámaras infrarrojas",
+        "Análisis de datos en tiempo real"
+      ]
+    },
+    "impacto": {
+      "titulo": "Impacto",
+      "items": [
+        "Protección ambiental",
+        "Apoyo al sector agrícola",
+        "Desarrollo tecnológico",
+        "Educación y concienciación"
+      ]
+    },
+    "derechos": "© 2025 WildTrack LoRaWAN. Proyecto de Monitoreo de Fauna Invasiva en Argentina."
+  },
+  "header": {
+    "subtitulo": "Proyecto de Monitoreo de Jabalíes en Argentina",
+    "destacado": "Proyecto Innovador"
+  },
+  "hero": {
+    "titulo": "Monitoreo Inteligente de Fauna Invasiva",
+    "descripcion": "Un proyecto innovador que combina tecnología IoT y conservación ambiental para abordar el problema de los jabalíes invasivos en Argentina"
+  },
+  "watchOnYouTube": "Ver en YouTube"
+}

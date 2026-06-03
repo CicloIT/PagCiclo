@@ -1,0 +1,38 @@
+# CicloIT
+
+> Soporte tecnológico, desarrollo de software, instalación Starlink y redes LoRaWAN en Río Cuarto, Córdoba, Argentina.
+
+CicloIT es una empresa de tecnología con 8 años de experiencia radicada en Río Cuarto, Córdoba, Argentina. Brindamos servicios de soporte IT, desarrollo de software a medida, instalación de conectividad Starlink para zonas rurales y empresas, despliegue de redes IoT con LoRaWAN, ciberseguridad y capacitación tecnológica.
+
+## Servicios
+
+- **Soporte IT y mantenimiento**: Planes mensuales CICLO Start, Pro y Max. Monitoreo 24/7, respuesta en menos de 2 horas, backup redundante y mantenimiento preventivo.
+- **Desarrollo web**: Sitios institucionales, landings y plataformas. Stack moderno (Next.js, Astro, WordPress), Core Web Vitals optimizados.
+- **Aplicaciones móviles**: Apps nativas e híbridas para iOS y Android. React Native, Flutter, Swift, Kotlin.
+- **Ciberseguridad**: Auditorías de seguridad, hardening de sistemas y respuesta a incidentes.
+- **Starlink**: Instalación y configuración profesional para campos, plantas, obras y zonas rurales sin conectividad.
+- **LoRaWAN / IoT**: Sensores, gateways y dashboards personalizados para agroindustria e industria.
+- **Cursos**: Capacitación en redes, sistemas y tecnología para empresas e individuos.
+
+## Datos de contacto
+
+- Web: https://cicloit.com
+- Email: info@cicloit.com
+- WhatsApp: +54 9 358 431 4857
+- Ubicación: Río Cuarto, Córdoba, Argentina
+- Horario: Lunes a Viernes, 9:00 a 18:00
+
+## Indicadores clave
+
+- 8 años en el mercado (fundada en 2018)
+- 80+ clientes activos
+- 240+ equipos monitoreados
+- 12 profesionales en el equipo
+- 99.6% uptime promedio anual
+- Tiempo de respuesta máximo: 2 horas
+
+## Casos de éxito
+
+- **AgroSur**: Migración a infraestructura monitoreada. De 4 caídas mensuales a 99.7% uptime en 6 meses.
+- **Clínica del Centro**: App interna de gestión de turnos entregada en 6 semanas. 94% adopción interna.
+- **Establecimiento El Algarrobo**: Instalación Starlink + 24 sensores LoRaWAN en 1.200 hectáreas.

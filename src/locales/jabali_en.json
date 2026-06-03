@@ -1,0 +1,321 @@
+{
+  "proyecto": {
+    "titulo": "The Project",
+    "descripcion": "Intelligent Invasive Fauna Monitoring",
+    "intro": "An innovative project combining IoT technology and environmental conservation to address the problem of invasive wild boars in Argentina",
+    "problema": {
+      "titulo": "The Problem",
+      "p1": "Wild boars were introduced to Argentina from Europe in the early 1900s for sport hunting preserves.",
+      "p2": "After escaping these enclosures, they have become one of the country's most problematic invasive species, causing:",
+      "lista": [
+        "Severe damage to agricultural crops",
+        "Destruction of native ecosystems",
+        "Competition with native wildlife",
+        "Soil erosion due to rooting behavior",
+        "Transmission of diseases"
+      ]
+    },
+    "solucion": {
+      "titulo": "Our Solution",
+      "p1": "We developed an intelligent monitoring system using LoRaWAN technology to track and study wild boar populations.",
+      "p2": "Our approach combines:",
+      "lista": [
+        "Low‑power IoT sensors",
+        "Infrared cameras for nocturnal detection",
+        "Long-range LoRaWAN network",
+        "Real‑time data analysis",
+        "Automated alerts for management"
+      ],
+      "final": "Providing scientific data for effective control strategies."
+    },
+    "caracteristicas": {
+      "titulo": "Project Features",
+      "monitoreo_preciso": {
+        "titulo": "Precise Monitoring",
+        "descripcion": "Real‑time detection and tracking of wild boar populations using advanced sensors."
+      },
+      "tecnologia_lorawan": {
+        "titulo": "LoRaWAN Technology",
+        "descripcion": "Long‑range, low‑power communication network for remote areas."
+      },
+      "camaras_infrarrojas": {
+        "titulo": "Infrared Cameras",
+        "descripcion": "Capture of nighttime images for specimen identification and counting."
+      },
+      "analisis_datos": {
+        "titulo": "Data Analysis",
+        "descripcion": "Smart processing of information for informed decision‑making."
+      }
+    },
+    "objetivos": {
+      "titulo": "Project Objectives",
+      "investigacion": {
+        "titulo": "Scientific Research",
+        "descripcion": "Generate scientific data on behavior, distribution, and movement patterns"
+      },
+      "mapeo": {
+        "titulo": "Population Mapping",
+        "descripcion": "Identify high‑density zones and movement routes"
+      },
+      "gestion": {
+        "titulo": "Effective Management",
+        "descripcion": "Provide tools for evidence‑based control strategies"
+      }
+    }
+  },
+  "impacto": {
+    "titulo": "Impact and Benefits of the Project",
+    "ambiental": {
+      "titulo": "Environmental Impact",
+      "conservacion": {
+        "titulo": "Ecosystem Conservation",
+        "descripcion": "Protection of native flora and fauna through informed invasive species control."
+      },
+      "restauracion": {
+        "titulo": "Habitat Restoration",
+        "descripcion": "Recovery of areas degraded by wild boar activity."
+      },
+      "biodiversidad": {
+        "titulo": "Biodiversity",
+        "descripcion": "Preservation of native species threatened by competition with wild boars."
+      }
+    },
+    "cientifico": {
+      "titulo": "Scientific Contribution",
+      "investigacion": {
+        "titulo": "Research",
+        "items": [
+          "Data on behavior and migration patterns",
+          "Population density analysis by area",
+          "Impact studies on local ecosystems"
+        ]
+      },
+      "innovacion": {
+        "titulo": "Technological Innovation",
+        "items": [
+          "Application of IoT in conservation",
+          "Development of detection algorithms",
+          "Remote monitoring methodologies"
+        ]
+      }
+    },
+    "economico": {
+      "titulo": "Economic and Social Impact",
+      "agricola": {
+        "titulo": "Agricultural Sector",
+        "items": [
+          "Reduction of crop losses",
+          "Protection of rural infrastructure",
+          "Improved agricultural productivity",
+          "Lower control costs"
+        ]
+      },
+      "rural": {
+        "titulo": "Rural Communities",
+        "items": [
+          "Training in new technologies",
+          "Creation of specialized jobs",
+          "Strengthening the local economy",
+          "Development of scientific tourism"
+        ]
+      }
+    },
+    "instalacion": {
+      "titulo": "Field Implementation",
+      "alt": "Sensor installed in the field",
+      "descripcion": "Milesight sensors are strategically installed in wild boar transit zones, providing continuous data on wildlife activity in their natural habitat. LoRaWAN technology enables remote monitoring without disturbing natural behaviors."
+    }
+  },
+  "tecnologia": {
+    "titulo": "Technology Used",
+    "gateway": {
+      "titulo": "LoRaWAN Gateway",
+      "alt": "RAK7289 Gateway",
+      "nombre": "WisGate RAK7289",
+      "caracteristicas": [
+        "8‑channel LoRaWAN gateway",
+        "Range up to 15 km in open field",
+        "4G/WiFi/Ethernet connectivity",
+        "Resistant to extreme weather conditions"
+      ]
+    },
+    "sensores": {
+      "titulo": "Milesight Sensors",
+      "sensor_principal": {
+        "alt": "Main Milesight IoT Sensor",
+        "nombre": "Main IoT Sensor",
+        "descripcion": "Motion detection and environmental monitoring",
+        "caracteristicas": [
+          "High‑sensitivity PIR detection",
+          "Temperature and humidity sensors",
+          "Long battery life (2+ years)",
+          "LoRaWAN transmission"
+        ]
+      },
+      "sensor_compacto": {
+        "alt": "Compact Milesight Sensor",
+        "nombre": "Compact Sensor",
+        "descripcion": "Discrete and efficient monitoring",
+        "caracteristicas": [
+          "Compact, durable design",
+          "Easy field installation",
+          "Two‑way communication",
+          "Remote configuration"
+        ]
+      }
+    },
+    "lorawan": {
+      "titulo": "Why LoRaWAN?",
+      "ventajas_titulo": "Technical Advantages",
+      "ventajas": [
+        "Long range (up to 15 km)",
+        "Low power consumption",
+        "Penetration through dense vegetation",
+        "Scalable and flexible network"
+      ],
+      "beneficios_titulo": "Project Benefits",
+      "beneficios": [
+        "Monitoring in remote areas",
+        "Installation without infrastructure",
+        "Minimal maintenance",
+        "Real-time data"
+      ]
+    },
+    "starlink": {
+      "titulo": "Satellite Connectivity - Starlink",
+      "alt": "Starlink antenna in open field",
+      "beneficios": [
+        "High-speed internet in rural and remote areas",
+        "Low latency for IoT data transmission",
+        "Easy setup and rapid deployment"
+      ],
+      "alt_img": "Starlink equipment installed"
+    },
+    "infrarojo": {
+      "titulo": "Infrared Cameras",
+      "alt": "Infrared camera for monitoring",
+      "beneficios": [
+        "Night vision and thermal detection",
+        "Ideal for 24/7 outdoor monitoring",
+        "Integration with LoRa or Wi-Fi networks"
+      ],
+      "alt_img": "Infrared camera image"
+    }
+  },
+  "recursos": {
+    "titulo": "Educational Resources and Documentation",
+    "youtube": [
+      {
+        "title": "Between Environmental Risk and the Million-Dollar Business: The Reality Behind Wild Boar Hunting in Córdoba",
+        "description": "Documentary on how wild boars became an invasive species in Argentina",
+        "channel": "Canal 12 Córdoba"
+      },
+      {
+        "title": "Why Was Wild Boar Sport Hunting Authorized?",
+        "description": "Explanation of how LoRaWAN technology works in conservation applications",
+        "channel": "Canal 12 Córdoba"
+      },
+      {
+        "title": "Wild Boar Invasion in Argentina",
+        "description": "Practical demonstration of IoT sensors used in the project",
+        "channel": "Canal 13 Río Cuarto"
+      },
+      {
+        "title": "Wild Boars Cause Damage and Destruction in Several Localities of the Calamuchita Valley",
+        "description": "Tutorial on LoRaWAN gateway configuration",
+        "channel": "Telefe Córdoba"
+      }
+    ],
+    "imagenes": {
+      "titulo": "Impact and challenges of wild boars in images",
+      "descripcion": "The expansion of wild boars into urban and rural areas represents one of the most complex conservation challenges today.",
+      "alt1": "Nocturnal wild boar",
+      "texto1": "Traffic accidents due to collisions with wild boars are a growing problem on Argentine and European roads.",
+      "alt2": "Informative sign in Madrid",
+      "texto2": "Urban campaigns warn about the risks of wild boars in cities: damage, diseases, and accidents.",
+      "alt3": "Information on risks of wild boars",
+      "texto3": "Wild boars pose health, economic, and road safety risks in urban and rural environments.",
+      "alt4": "Road accident with wild boar",
+      "texto4": "Wild boar captured by a trap camera in a natural environment. Its nocturnal activity makes traditional control and monitoring difficult."
+    },
+    "enlaces": {
+      "titulo": "Links of Interest",
+      "tecnica": "Technical Documentation",
+      "tecnica_links": [
+        {
+          "href": "https://www.youtube.com/results?search_query=lorawan+technology+tutorial",
+          "label": "LoRaWAN Technology Guides"
+        },
+        {
+          "href": "https://www.youtube.com/results?search_query=milesight+sensors+setup",
+          "label": "Milesight Sensors Setup"
+        },
+        {
+          "href": "https://www.youtube.com/results?search_query=rak7289+gateway+configuration",
+          "label": "RAK7289 Gateway Manual"
+        }
+      ],
+      "jabali": "Information about Wild Boars",
+      "jabali_links": [
+        {
+          "href": "https://www.youtube.com/results?search_query=jabali+argentina+invasion+especies",
+          "label": "Documentaries on Invasive Species"
+        },
+        {
+          "href": "https://www.youtube.com/results?search_query=wild+boar+monitoring+technology",
+          "label": "Wildlife Monitoring Technologies"
+        },
+        {
+          "href": "https://www.youtube.com/results?search_query=conservation+technology+iot",
+          "label": "IoT Sensors"
+        }
+      ]
+    },
+    "contacto": {
+      "titulo": "Interested in the Project?",
+      "descripcion": "If you’d like to learn more about implementing this monitoring system or collaborate on future research, don’t hesitate to contact us.",
+      "telefono": "3584314857",
+      "email": "info@cicloit.com"
+    }
+  },
+  "footer": {
+    "descripcion": "Innovative invasive fauna monitoring project using IoT technology and long-range communication networks.",
+    "proyecto": {
+      "titulo": "The Project",
+      "items": [
+        "Invasive wild boar monitoring",
+        "Ecosystem conservation",
+        "Scientific research",
+        "Sustainable technology"
+      ]
+    },
+    "tecnologia": {
+      "titulo": "Technology",
+      "items": [
+        "Milesight IoT sensors",
+        "RAK7289 LoRaWAN Gateway",
+        "Infrared cameras",
+        "Real-time data analysis"
+      ]
+    },
+    "impacto": {
+      "titulo": "Impact",
+      "items": [
+        "Environmental protection",
+        "Support for the agricultural sector",
+        "Technological development",
+        "Education and awareness"
+      ]
+    },
+    "derechos": "© 2025 WildTrack LoRaWAN. Invasive Fauna Monitoring Project in Argentina."
+  },
+  "header": {
+    "subtitulo": "Wild Boar Monitoring Project in Argentina",
+    "destacado": "Innovative Project"
+  },
+  "hero": {
+    "titulo": "Intelligent Invasive Fauna Monitoring",
+    "descripcion": "An innovative project combining IoT technology and environmental conservation to address the problem of invasive wild boars in Argentina"
+  },
+  "watchOnYouTube": "Watch on YouTube"
+}
