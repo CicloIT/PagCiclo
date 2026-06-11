@@ -1,7 +1,10 @@
 import { CicloMark } from './ui'
 import { NAV_ITEMS } from './Nav'
+import { useTranslation } from '../context/TranslationContext'
 
 export default function Footer({ onGo }) {
+  const { t } = useTranslation()
+
   return (
     <footer className="footer-root">
       <div className="container">
@@ -12,7 +15,7 @@ export default function Footer({ onGo }) {
               <span style={{ fontSize: 18, fontWeight: 600 }}>Ciclo<span style={{ color: 'var(--primary)' }}>IT</span></span>
             </div>
             <p className="muted" style={{ maxWidth: '32ch', fontSize: 14 }}>
-              Innovación cíclica, resultados permanentes. Soporte, desarrollo y conectividad desde Río Cuarto.
+              {t('footer.tagline')}
             </p>
             <div style={{ display: 'flex', gap: 8, marginTop: 20 }}>
               <a className="footer-social" href="https://www.linkedin.com/company/ciclo-it" target="_blank" rel="noopener" aria-label="LinkedIn">
@@ -34,39 +37,39 @@ export default function Footer({ onGo }) {
           </div>
 
           <div>
-            <div className="footer-h">Navegar</div>
+            <div className="footer-h">{t('footer.nav')}</div>
             <ul className="footer-list">
               {NAV_ITEMS.map(it => (
-                <li key={it.id}><button onClick={() => onGo(it.id)}>{it.label}</button></li>
+                <li key={it.id}><button onClick={() => onGo(it.id)}>{t(it.label)}</button></li>
               ))}
             </ul>
           </div>
 
           <div>
-            <div className="footer-h">Servicios</div>
+            <div className="footer-h">{t('footer.services')}</div>
             <ul className="footer-list">
-              <li><button onClick={() => onGo('planes')}>Planes de Soporte</button></li>
-              <li><button onClick={() => onGo('servicios')}>Desarrollo a medida</button></li>
-              <li><button onClick={() => onGo('servicios')}>Ciberseguridad</button></li>
-              <li><button onClick={() => onGo('starlink')}>Instalación Starlink</button></li>
-              <li><button onClick={() => onGo('lorawan')}>LoRaWAN / IoT</button></li>
+              <li><button onClick={() => onGo('planes')}>{t('footer.svc.planes')}</button></li>
+              <li><button onClick={() => onGo('servicios')}>{t('footer.svc.desarrollo')}</button></li>
+              <li><button onClick={() => onGo('servicios')}>{t('footer.svc.ciber')}</button></li>
+              <li><button onClick={() => onGo('instalacion-starlink')}>{t('footer.svc.starlink')}</button></li>
+              <li><button onClick={() => onGo('lorawan')}>{t('footer.svc.lorawan')}</button></li>
             </ul>
           </div>
 
           <div>
-            <div className="footer-h">Contacto</div>
+            <div className="footer-h">{t('footer.contact')}</div>
             <ul className="footer-list">
               <li><a href="mailto:info@cicloit.com">info@cicloit.com</a></li>
               <li><a href="https://wa.me/5493584314857" target="_blank" rel="noopener">+54 9 358 431 4857</a></li>
               <li className="muted" style={{ fontSize: 13, paddingTop: 8 }}>Río Cuarto, Córdoba, Argentina</li>
-              <li className="muted" style={{ fontSize: 13 }}>Lun–Vie · 9:00 a 18:00</li>
+              <li className="muted" style={{ fontSize: 13 }}>{t('footer.hours')}</li>
             </ul>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <div className="mono" style={{ fontSize: 12, color: 'var(--text-faint)' }}>© 2026 CicloIT — Todos los derechos reservados.</div>
-          <div className="mono" style={{ fontSize: 12, color: 'var(--text-faint)' }}>Diseñado y desarrollado por CicloIT.</div>
+          <div className="mono" style={{ fontSize: 12, color: 'var(--text-faint)' }}>{t('footer.copyright')}</div>
+          <div className="mono" style={{ fontSize: 12, color: 'var(--text-faint)' }}>{t('footer.credit')}</div>
         </div>
       </div>
 

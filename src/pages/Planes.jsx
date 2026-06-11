@@ -1,78 +1,95 @@
 import { Fragment } from 'react'
 import { Reveal, Eyebrow, Tick, Arrow } from '../components/ui'
-
-const PLANS = [
-  {
-    id: 'start', tier: 'Nivel 1', name: 'CICLO Start', tag: 'Lo esencial',
-    desc: 'Para empezar a cuidar tu tecnología sin sobre-comprometerse.',
-    target: 'Comercios y oficinas chicas, 1–10 usuarios',
-    sla: 'Respuesta 24–48 hs · L–V 9 a 18',
-  },
-  {
-    id: 'pro', tier: 'Nivel 2', name: 'CICLO Pro', tag: 'Más elegido', featured: true,
-    desc: 'Gestión activa, mejoras continuas y respuesta prioritaria.',
-    target: 'PyMEs con operación continua, 10–80 usuarios',
-    sla: 'Respuesta 4–8 hs · 24/7 multicanal',
-  },
-  {
-    id: 'max', tier: 'Nivel 3', name: 'CICLO Max', tag: 'Operación crítica',
-    desc: 'Soporte total, atención inmediata y optimización completa.',
-    target: 'Empresas medianas/grandes y operaciones críticas',
-    sla: 'Respuesta 1–2 hs · gerente de cuenta',
-  },
-]
-
-const COMPARISON_GROUPS = [
-  {
-    name: 'Soporte y respuesta',
-    rows: [
-      ['Soporte por email', true, true, true],
-      ['Soporte telefónico', false, true, true],
-      ['Soporte por WhatsApp', false, true, true],
-      ['Atención fuera de horario', false, true, true],
-      ['Tiempo de respuesta', '24–48 hs', '4–8 hs', '1–2 hs'],
-      ['Soporte 24/7 multicanal', false, true, true],
-    ],
-  },
-  {
-    name: 'Monitoreo y mantenimiento',
-    rows: [
-      ['Monitoreo de equipos', 'Mensual', 'Tiempo real', 'Tiempo real'],
-      ['Mantenimiento preventivo', 'Básico', 'Proactivo', 'Predictivo'],
-      ['Actualizaciones de seguridad', true, 'Prioritarias', 'Prioritarias'],
-      ['Optimización de infraestructura', false, 'Avanzada', 'Continua'],
-    ],
-  },
-  {
-    name: 'Backups y resguardo',
-    rows: [
-      ['Backup', 'Básico', 'Redundante', 'Múltiples'],
-      ['Restauración asistida', true, true, true],
-      ['Pruebas de restore periódicas', false, 'Trimestral', 'Mensual'],
-    ],
-  },
-  {
-    name: 'Reportería',
-    rows: [
-      ['Documentación técnica', true, true, true],
-      ['Reportes', 'A demanda', 'Semanales', 'Personalizados'],
-      ['Revisión ejecutiva', false, false, 'Mensual'],
-    ],
-  },
-  {
-    name: 'Consultoría y proyectos',
-    rows: [
-      ['Consultoría técnica', false, true, true],
-      ['Consultoría estratégica', false, false, true],
-      ['Implementación de mejoras', 'Cotizable', 'Incluida limitada', 'Incluida'],
-      ['Auditorías de seguridad', false, false, 'Anual incluida'],
-      ['Capacitación del equipo', false, false, 'Incluida'],
-      ['Gerente de cuenta dedicado', false, false, true],
-    ],
-  },
-]
+import { useTranslation } from '../context/TranslationContext'
 
 export default function Planes({ onGo }) {
+  const { t } = useTranslation()
+
+  const PLANS = [
+    {
+      id: 'start', tier: t('planes.start.tier'), name: 'CICLO Start', tag: t('planes.start.tag'),
+      desc: t('planes.start.desc'),
+      target: t('planes.start.target'),
+      sla: t('planes.start.sla'),
+    },
+    {
+      id: 'pro', tier: t('planes.pro.tier'), name: 'CICLO Pro', tag: t('planes.pro.tag'), featured: true,
+      desc: t('planes.pro.desc'),
+      target: t('planes.pro.target'),
+      sla: t('planes.pro.sla'),
+    },
+    {
+      id: 'max', tier: t('planes.max.tier'), name: 'CICLO Max', tag: t('planes.max.tag'),
+      desc: t('planes.max.desc'),
+      target: t('planes.max.target'),
+      sla: t('planes.max.sla'),
+    },
+  ]
+
+  const COMPARISON_GROUPS = [
+    {
+      name: t('planes.cmp.grp.soporte'),
+      rows: [
+        [t('planes.cmp.r.email'), true, true, true],
+        [t('planes.cmp.r.tel'), false, true, true],
+        [t('planes.cmp.r.wa'), false, true, true],
+        [t('planes.cmp.r.fuera'), false, true, true],
+        [t('planes.cmp.r.tiempo'), '24–48 hs', '4–8 hs', '1–2 hs'],
+        [t('planes.cmp.r.247'), false, true, true],
+      ],
+    },
+    {
+      name: t('planes.cmp.grp.monitoreo'),
+      rows: [
+        [t('planes.cmp.r.monitoreo'), t('planes.cmp.v.mensual'), t('planes.cmp.v.realtime'), t('planes.cmp.v.realtime')],
+        [t('planes.cmp.r.mante'), t('planes.cmp.v.basico'), t('planes.cmp.v.proactivo'), t('planes.cmp.v.predictivo')],
+        [t('planes.cmp.r.seg'), true, t('planes.cmp.v.prioritarias'), t('planes.cmp.v.prioritarias')],
+        [t('planes.cmp.r.opt'), false, t('planes.cmp.v.avanzada'), t('planes.cmp.v.continua')],
+      ],
+    },
+    {
+      name: t('planes.cmp.grp.backups'),
+      rows: [
+        [t('planes.cmp.r.backup'), t('planes.cmp.v.basico'), t('planes.cmp.v.redundante'), t('planes.cmp.v.multiples')],
+        [t('planes.cmp.r.rest'), true, true, true],
+        [t('planes.cmp.r.testRestore'), false, t('planes.cmp.v.trimestral'), t('planes.cmp.v.mensualRev')],
+      ],
+    },
+    {
+      name: t('planes.cmp.grp.reporteria'),
+      rows: [
+        [t('planes.cmp.r.doc'), true, true, true],
+        [t('planes.cmp.r.rep'), t('planes.cmp.v.demanda'), t('planes.cmp.v.semanales'), t('planes.cmp.v.personaliz')],
+        [t('planes.cmp.r.rev'), false, false, t('planes.cmp.v.mensualRev')],
+      ],
+    },
+    {
+      name: t('planes.cmp.grp.consultoria'),
+      rows: [
+        [t('planes.cmp.r.consult'), false, true, true],
+        [t('planes.cmp.r.estrategia'), false, false, true],
+        [t('planes.cmp.r.impl'), t('planes.cmp.v.cotizable'), t('planes.cmp.v.inclLim'), t('planes.cmp.v.incl')],
+        [t('planes.cmp.r.audit'), false, false, t('planes.cmp.v.anualIncl')],
+        [t('planes.cmp.r.cap'), false, false, t('planes.cmp.v.incl')],
+        [t('planes.cmp.r.gerente'), false, false, true],
+      ],
+    },
+  ]
+
+  const howItems = [
+    { p: t('planes.how.start.p'), q: t('planes.how.start.q'), a: 'CICLO Start' },
+    { p: t('planes.how.pro.p'), q: t('planes.how.pro.q'), a: 'CICLO Pro' },
+    { p: t('planes.how.max.p'), q: t('planes.how.max.q'), a: 'CICLO Max' },
+  ]
+
+  const faqItems = [
+    [t('planes.faq.q1'), t('planes.faq.a1')],
+    [t('planes.faq.q2'), t('planes.faq.a2')],
+    [t('planes.faq.q3'), t('planes.faq.a3')],
+    [t('planes.faq.q4'), t('planes.faq.a4')],
+    [t('planes.faq.q5'), t('planes.faq.a5')],
+  ]
+
   return (
     <main className="page">
       <title>Planes de Soporte IT — CicloIT | CICLO Start, Pro y Max</title>
@@ -82,16 +99,16 @@ export default function Planes({ onGo }) {
       <meta property="og:url" content="https://cicloit.com/planes" />
       <meta property="og:type" content="website" />
       <link rel="canonical" href="https://cicloit.com/planes" />
+
       {/* HERO */}
       <section className="section section-tight" style={{ paddingTop: 'calc(var(--pad-section) * .6)' }}>
         <div className="container">
-          <Eyebrow>Planes de soporte</Eyebrow>
+          <Eyebrow>{t('planes.eyebrow')}</Eyebrow>
           <h1 className="h-display" style={{ marginTop: 16, maxWidth: '14ch' }}>
-            Elegí el ciclo que<br/>te haga sentido.
+            {t('planes.title')}
           </h1>
           <p className="lede" style={{ marginTop: 24 }}>
-            Todos los planes son mensuales, sin permanencia. Empezás donde necesitás y subís
-            de nivel cuando la operación lo pide. Sin sorpresas en la factura.
+            {t('planes.lede')}
           </p>
         </div>
       </section>
@@ -114,11 +131,11 @@ export default function Planes({ onGo }) {
                   <p className="muted" style={{ marginTop: 10, fontSize: 14.5 }}>{p.desc}</p>
                   <div className="pb-meta">
                     <div className="pb-meta-row">
-                      <span className="mono pb-meta-k">Para</span>
+                      <span className="mono pb-meta-k">{t('planes.para')}</span>
                       <span>{p.target}</span>
                     </div>
                     <div className="pb-meta-row">
-                      <span className="mono pb-meta-k">SLA</span>
+                      <span className="mono pb-meta-k">{t('planes.sla')}</span>
                       <span>{p.sla}</span>
                     </div>
                   </div>
@@ -127,10 +144,10 @@ export default function Planes({ onGo }) {
                     style={{ marginTop: 28, width: '100%', justifyContent: 'center' }}
                     onClick={() => onGo('contacto')}
                   >
-                    Contratar {p.name.split(' ')[1]}
+                    {t('planes.contratar')} {p.name.split(' ')[1]}
                   </button>
                   <div className="mono" style={{ fontSize: 11, color: 'var(--text-faint)', marginTop: 14, textAlign: 'center', letterSpacing: '0.06em' }}>
-                    Cotizado a medida según equipos y usuarios.
+                    {t('planes.pricing')}
                   </div>
                 </div>
               </Reveal>
@@ -155,13 +172,13 @@ export default function Planes({ onGo }) {
       {/* COMPARATIVE TABLE */}
       <section className="section">
         <div className="container">
-          <Eyebrow>Comparativa detallada</Eyebrow>
-          <h2 className="h-1" style={{ marginTop: 14 }}>Qué incluye cada plan.</h2>
+          <Eyebrow>{t('planes.cmp.eyebrow')}</Eyebrow>
+          <h2 className="h-1" style={{ marginTop: 14 }}>{t('planes.cmp.title')}</h2>
           <div className="cmp-wrap">
             <table className="cmp-table">
               <thead>
                 <tr>
-                  <th>Característica</th>
+                  <th>{t('planes.cmp.feature')}</th>
                   {PLANS.map(p => (
                     <th key={p.id} className={p.featured ? 'is-featured' : ''}>
                       <div className="cmp-th-name">{p.name}</div>
@@ -216,20 +233,16 @@ export default function Planes({ onGo }) {
       {/* HOW TO CHOOSE */}
       <section className="section section-tight">
         <div className="container">
-          <Eyebrow>Cómo elegir</Eyebrow>
-          <h2 className="h-1" style={{ marginTop: 14, maxWidth: '24ch' }}>Si no estás seguro, esto te puede orientar.</h2>
+          <Eyebrow>{t('planes.how.eyebrow')}</Eyebrow>
+          <h2 className="h-1" style={{ marginTop: 14, maxWidth: '24ch' }}>{t('planes.how.title')}</h2>
           <div className="g-grid g-grid-3 g-gap-md" style={{ marginTop: 40 }}>
-            {[
-              { p: 'Empezás', q: 'Si recién estás organizando tu IT y querés evitar improvisaciones.', a: 'CICLO Start' },
-              { p: 'Crecés', q: 'Si la operación no puede frenar y necesitás reacción rápida.', a: 'CICLO Pro' },
-              { p: 'Operás crítico', q: 'Si una hora caído equivale a una pérdida importante.', a: 'CICLO Max' },
-            ].map((c, i) => (
+            {howItems.map((c, i) => (
               <Reveal key={c.a} delay={i * 80}>
                 <div className="card">
                   <div className="mono" style={{ fontSize: 11, color: 'var(--primary)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>{c.p}</div>
                   <p style={{ marginTop: 12, fontSize: 16, lineHeight: 1.45 }}>{c.q}</p>
                   <div style={{ marginTop: 20, paddingTop: 20, borderTop: '1px dashed var(--border-strong)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                    <span className="mono" style={{ fontSize: 11, color: 'var(--text-muted)' }}>Recomendado</span>
+                    <span className="mono" style={{ fontSize: 11, color: 'var(--text-muted)' }}>{t('planes.how.recommended')}</span>
                     <span style={{ fontWeight: 500 }}>{c.a}</span>
                   </div>
                 </div>
@@ -242,16 +255,10 @@ export default function Planes({ onGo }) {
       {/* FAQ */}
       <section className="section section-tight">
         <div className="container">
-          <Eyebrow>Preguntas frecuentes</Eyebrow>
-          <h2 className="h-1" style={{ marginTop: 14 }}>Antes de contratar.</h2>
+          <Eyebrow>{t('planes.faq.eyebrow')}</Eyebrow>
+          <h2 className="h-1" style={{ marginTop: 14 }}>{t('planes.faq.title')}</h2>
           <div className="faq-list">
-            {[
-              ['¿Hay contrato de permanencia?', 'No. Todos los planes se facturan mensualmente y podés dar de baja con 30 días de aviso.'],
-              ['¿Cómo se cotiza cada plan?', 'A medida. Relevamos cantidad de equipos, usuarios, sistemas críticos y SLAs deseados. Te pasamos cotización en menos de 48 hs.'],
-              ['¿Puedo cambiar de plan?', 'Sí, en cualquier momento. Hacemos un ajuste proporcional en la próxima factura.'],
-              ['¿Atienden fuera de Río Cuarto?', 'Trabajamos en toda Argentina. Soporte remoto siempre; soporte presencial según ubicación.'],
-              ['¿Qué pasa fuera del SLA?', 'Cualquier urgencia se atiende. El SLA define el compromiso de respuesta, no el límite del soporte.'],
-            ].map(([q, a], i) => (
+            {faqItems.map(([q, a], i) => (
               <details key={i} className="faq-item">
                 <summary>
                   <span>{q}</span>
@@ -278,12 +285,12 @@ export default function Planes({ onGo }) {
         <div className="container">
           <div className="cta-final" style={{ borderRadius: 'var(--radius-xl)', padding: '56px', display: 'grid', gridTemplateColumns: '1.4fr auto', gap: 48, alignItems: 'center' }}>
             <div>
-              <h2 className="h-1" style={{ maxWidth: '20ch' }}>¿Hablamos del plan que necesitás?</h2>
-              <p className="lede" style={{ marginTop: 16 }}>Cotización clara en 48 hs. Sin compromiso.</p>
+              <h2 className="h-1" style={{ maxWidth: '20ch' }}>{t('planes.cta.title')}</h2>
+              <p className="lede" style={{ marginTop: 16 }}>{t('planes.cta.lede')}</p>
             </div>
             <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-              <button className="btn btn-primary btn-arrow" onClick={() => onGo('contacto')}>Pedir cotización</button>
-              <a className="btn btn-ghost" href="https://wa.me/5493584314857" target="_blank" rel="noopener">WhatsApp</a>
+              <button className="btn btn-primary btn-arrow" onClick={() => onGo('contacto')}>{t('planes.cta.btn1')}</button>
+              <a className="btn btn-ghost" href="https://wa.me/5493584314857" target="_blank" rel="noopener">{t('planes.cta.btn2')}</a>
             </div>
           </div>
         </div>

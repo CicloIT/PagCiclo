@@ -1,6 +1,59 @@
 import { Reveal, Eyebrow, Stat, Tick } from '../components/ui'
+import { useTranslation } from '../context/TranslationContext'
 
 export default function Nosotros({ onGo }) {
+  const { t } = useTranslation()
+
+  const manifesto = [
+    [t('nosotros.manifesto.01.h'), t('nosotros.manifesto.01.d')],
+    [t('nosotros.manifesto.02.h'), t('nosotros.manifesto.02.d')],
+    [t('nosotros.manifesto.03.h'), t('nosotros.manifesto.03.d')],
+    [t('nosotros.manifesto.04.h'), t('nosotros.manifesto.04.d')],
+  ]
+
+  const cases = [
+    {
+      cli: 'AgroSur · Sector agropecuario',
+      img: '/Infraja.jpeg',
+      title: t('nosotros.cases.c1.title'),
+      kpi: [[t('nosotros.cases.kpi.uptime'), '99.7%'], [t('nosotros.cases.kpi.tickets'), '−82%'], [t('nosotros.cases.kpi.plan'), 'CICLO Max']],
+      desc: t('nosotros.cases.c1.desc'),
+      tags: ['Soporte', 'Infraestructura', 'Backup'],
+    },
+    {
+      cli: 'Clínica del Centro · Salud',
+      img: '/Turno.webp',
+      title: t('nosotros.cases.c2.title'),
+      kpi: [[t('nosotros.cases.kpi.launch'), '6 sem'], [t('nosotros.cases.kpi.adopt'), '94%'], [t('nosotros.cases.kpi.platform'), 'iOS + Web']],
+      desc: t('nosotros.cases.c2.desc'),
+      tags: ['Software a medida', 'iOS', 'Integración'],
+    },
+    {
+      cli: 'Establecimiento El Algarrobo · Agro',
+      img: '/StarlinkMini.webp',
+      title: t('nosotros.cases.c3.title'),
+      kpi: [[t('nosotros.cases.kpi.cover'), '100%'], [t('nosotros.cases.kpi.sensors'), '24'], [t('nosotros.cases.kpi.services'), 'Starlink + IoT']],
+      desc: t('nosotros.cases.c3.desc'),
+      tags: ['Starlink', 'LoRaWAN', 'Agro'],
+    },
+  ]
+
+  const testimonials = [
+    { q: 'CicloIT no nos vende soluciones, nos ayuda a tomar mejores decisiones. La diferencia con otros proveedores es notable: hablan claro, miden todo y se anticipan.', a: 'Lucía Martínez', r: 'Gerente de Operaciones · AgroSur', plan: 'CICLO Max · 3 años' },
+    { q: 'Necesitábamos una app móvil interna y la entregaron en 6 semanas, funcionando. Documentación, capacitación y soporte impecables.', a: 'Florencia Pérez', r: 'CTO · Clínica del Centro', plan: 'Software + Pro' },
+    { q: 'Instalaron Starlink en un campo donde no había nada. En 48 hs estábamos online y la atención post-venta sigue.', a: 'Ramiro Bedoya', r: 'Productor agropecuario · El Algarrobo', plan: 'Starlink + LoRaWAN' },
+    { q: 'Tuvimos un incidente de seguridad un sábado a la noche. Estaban encima en 15 minutos. Resolvieron, documentaron y mejoraron los procesos.', a: 'Jorge Casas', r: 'Director · Estudio Casas & Asoc.', plan: 'CICLO Pro' },
+  ]
+
+  const teamRows = [
+    [t('nosotros.team.soporte'), '4 personas'],
+    [t('nosotros.team.dev'), '5 personas'],
+    [t('nosotros.team.ciber'), '2 personas'],
+    [t('nosotros.team.iot'), '2 personas'],
+    [t('nosotros.team.design'), '1 persona'],
+    [t('nosotros.team.ops'), '2 personas'],
+  ]
+
   return (
     <main className="page">
       <title>Nosotros — CicloIT | Equipo Tecnológico en Río Cuarto</title>
@@ -10,16 +63,16 @@ export default function Nosotros({ onGo }) {
       <meta property="og:url" content="https://cicloit.com/nosotros" />
       <meta property="og:type" content="website" />
       <link rel="canonical" href="https://cicloit.com/nosotros" />
+
       {/* HERO */}
       <section className="section section-tight" style={{ paddingTop: 'calc(var(--pad-section) * .55)' }}>
         <div className="container">
-          <Eyebrow>Sobre nosotros · Río Cuarto, AR</Eyebrow>
+          <Eyebrow>{t('nosotros.eyebrow')}</Eyebrow>
           <h1 className="h-display" style={{ marginTop: 16, maxWidth: '16ch' }}>
-            Un ciclo que <span style={{ color: 'var(--primary)' }}>nunca se</span> detiene.
+            {t('nosotros.title.before')}<span style={{ color: 'var(--primary)' }}>{t('nosotros.title.highlight')}</span>{t('nosotros.title.after')}
           </h1>
           <p className="lede" style={{ marginTop: 24 }}>
-            Somos un equipo de profesionales en mantenimiento, desarrollo de software y conectividad.
-            Trabajamos con empresas que necesitan tecnología que funcione, todo el tiempo, sin excusas.
+            {t('nosotros.lede')}
           </p>
         </div>
       </section>
@@ -29,16 +82,11 @@ export default function Nosotros({ onGo }) {
         <div className="container">
           <div className="manifesto">
             <div className="manifesto-side">
-              <Eyebrow>Manifiesto</Eyebrow>
-              <h2 className="h-1" style={{ marginTop: 12, maxWidth: '12ch' }}>Cómo pensamos.</h2>
+              <Eyebrow>{t('nosotros.manifesto.eyebrow')}</Eyebrow>
+              <h2 className="h-1" style={{ marginTop: 12, maxWidth: '12ch' }}>{t('nosotros.manifesto.title')}</h2>
             </div>
             <ol className="manifesto-list">
-              {[
-                ['Anticiparse, no reaccionar.', 'Un sistema bien mantenido no necesita rescates. Invertimos tiempo en prevención y monitoreo para que las urgencias sean la excepción.'],
-                ['Claridad por encima de jerga.', 'Hablamos en castellano simple. Si una solución no puede explicarse, probablemente no sea la mejor solución.'],
-                ['Ciclos, no fuegos.', 'Mejor mantener que parchear. Trabajamos en ciclos de revisión y mejora, no en heroicidades aisladas.'],
-                ['Datos sobre opiniones.', 'Medimos, reportamos y decidimos en base a evidencia. La intuición ayuda, pero los números mandan.'],
-              ].map(([h, d], i) => (
+              {manifesto.map(([h, d], i) => (
                 <li key={h}>
                   <span className="manifesto-n mono">0{i + 1}</span>
                   <div>
@@ -64,10 +112,10 @@ export default function Nosotros({ onGo }) {
       <section className="section section-tight">
         <div className="container">
           <div className="metrics-grid">
-            <Stat value="8" label="Años trabajando" />
-            <Stat value="80+" label="Clientes activos" />
-            <Stat value="240+" label="Equipos monitoreados" />
-            <Stat value="12" label="Profesionales en el equipo" />
+            <Stat value="8" label={t('nosotros.stats.años')} />
+            <Stat value="80+" label={t('nosotros.stats.clientes')} />
+            <Stat value="240+" label={t('nosotros.stats.equipos')} />
+            <Stat value="12" label={t('nosotros.stats.profesionales')} />
           </div>
         </div>
         <style>{`
@@ -79,35 +127,10 @@ export default function Nosotros({ onGo }) {
       {/* CASE STUDIES */}
       <section className="section">
         <div className="container">
-          <Eyebrow>Casos de éxito</Eyebrow>
-          <h2 className="h-1" style={{ marginTop: 14, maxWidth: '20ch' }}>Algunos proyectos recientes.</h2>
+          <Eyebrow>{t('nosotros.cases.eyebrow')}</Eyebrow>
+          <h2 className="h-1" style={{ marginTop: 14, maxWidth: '20ch' }}>{t('nosotros.cases.title')}</h2>
           <div className="cases">
-            {[
-              {
-                cli: 'AgroSur · Sector agropecuario',
-                img: '/Infraja.jpeg',
-                title: 'De 4 caídas mensuales a uptime 99.7% en seis meses',
-                kpi: [['Uptime', '99.7%'], ['Tickets críticos', '−82%'], ['Plan', 'CICLO Max']],
-                d: 'Migración completa a infraestructura monitoreada en tiempo real, con backups redundantes y mantenimiento preventivo trimestral.',
-                tags: ['Soporte', 'Infraestructura', 'Backup'],
-              },
-              {
-                cli: 'Clínica del Centro · Salud',
-                img: '/Turno.webp',
-                title: 'App interna para gestión de turnos en 6 semanas',
-                kpi: [['Time-to-launch', '6 sem'], ['Adopción interna', '94%'], ['Plataforma', 'iOS + Web']],
-                d: 'Diseño, desarrollo y publicación de aplicación interna integrada al sistema de historia clínica. Documentación y soporte continuos.',
-                tags: ['Software a medida', 'iOS', 'Integración'],
-              },
-              {
-                cli: 'Establecimiento El Algarrobo · Agro',
-                img: '/StarlinkMini.webp',
-                title: 'Starlink + sensores LoRaWAN en 1.200 ha',
-                kpi: [['Cobertura', '100%'], ['Sensores activos', '24'], ['Servicios', 'Starlink + IoT']],
-                d: 'Instalación de Starlink en casa de campo, gateway LoRaWAN y sensores de nivel en tanques y silos. Dashboard centralizado.',
-                tags: ['Starlink', 'LoRaWAN', 'Agro'],
-              },
-            ].map((c, i) => (
+            {cases.map((c, i) => (
               <Reveal key={c.title} delay={i * 80}>
                 <article className="case">
                   <div className="img-wrap case-side">
@@ -116,9 +139,9 @@ export default function Nosotros({ onGo }) {
                   <div className="case-main">
                     <div className="mono" style={{ fontSize: 11, color: 'var(--text-muted)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>{c.cli}</div>
                     <h3 className="h-2" style={{ marginTop: 12 }}>{c.title}</h3>
-                    <p className="muted" style={{ marginTop: 12, fontSize: 15 }}>{c.d}</p>
+                    <p className="muted" style={{ marginTop: 12, fontSize: 15 }}>{c.desc}</p>
                     <div style={{ marginTop: 16, display: 'flex', flexWrap: 'wrap', gap: 6 }}>
-                      {c.tags.map(t => <span key={t} className="tag">{t}</span>)}
+                      {c.tags.map(tg => <span key={tg} className="tag">{tg}</span>)}
                     </div>
                     <div className="case-kpi">
                       {c.kpi.map(([k, v]) => (
@@ -146,26 +169,21 @@ export default function Nosotros({ onGo }) {
       {/* TESTIMONIALS */}
       <section className="section">
         <div className="container">
-          <Eyebrow>Lo que dicen</Eyebrow>
-          <h2 className="h-1" style={{ marginTop: 14 }}>Testimonios.</h2>
+          <Eyebrow>{t('nosotros.test.eyebrow')}</Eyebrow>
+          <h2 className="h-1" style={{ marginTop: 14 }}>{t('nosotros.test.title')}</h2>
           <div className="g-grid g-grid-2 g-gap-md" style={{ marginTop: 40 }}>
-            {[
-              { q: 'CicloIT no nos vende soluciones, nos ayuda a tomar mejores decisiones. La diferencia con otros proveedores es notable: hablan claro, miden todo y se anticipan.', a: 'Lucía Martínez', r: 'Gerente de Operaciones · AgroSur', plan: 'CICLO Max · 3 años' },
-              { q: 'Necesitábamos una app móvil interna y la entregaron en 6 semanas, funcionando. Documentación, capacitación y soporte impecables.', a: 'Florencia Pérez', r: 'CTO · Clínica del Centro', plan: 'Software + Pro' },
-              { q: 'Instalaron Starlink en un campo donde no había nada. En 48 hs estábamos online y la atención post-venta sigue.', a: 'Ramiro Bedoya', r: 'Productor agropecuario · El Algarrobo', plan: 'Starlink + LoRaWAN' },
-              { q: 'Tuvimos un incidente de seguridad un sábado a la noche. Estaban encima en 15 minutos. Resolvieron, documentaron y mejoraron los procesos.', a: 'Jorge Casas', r: 'Director · Estudio Casas & Asoc.', plan: 'CICLO Pro' },
-            ].map((t, i) => (
+            {testimonials.map((item, i) => (
               <Reveal key={i} delay={i * 80}>
                 <article className="testi">
                   <div className="t-quote mono">"</div>
-                  <p style={{ fontSize: 17, lineHeight: 1.5 }}>{t.q}</p>
+                  <p style={{ fontSize: 17, lineHeight: 1.5 }}>{item.q}</p>
                   <div className="t-meta">
                     <div className="t-avatar" />
                     <div>
-                      <div style={{ fontWeight: 500, fontSize: 14.5 }}>{t.a}</div>
-                      <div className="muted" style={{ fontSize: 13 }}>{t.r}</div>
+                      <div style={{ fontWeight: 500, fontSize: 14.5 }}>{item.a}</div>
+                      <div className="muted" style={{ fontSize: 13 }}>{item.r}</div>
                     </div>
-                    <span className="tag" style={{ marginLeft: 'auto' }}>{t.plan}</span>
+                    <span className="tag" style={{ marginLeft: 'auto' }}>{item.plan}</span>
                   </div>
                 </article>
               </Reveal>
@@ -183,21 +201,14 @@ export default function Nosotros({ onGo }) {
       {/* TEAM */}
       <section className="section section-tight">
         <div className="container">
-          <Eyebrow>Equipo</Eyebrow>
-          <h2 className="h-1" style={{ marginTop: 14, maxWidth: '20ch' }}>Quienes están atrás del ciclo.</h2>
+          <Eyebrow>{t('nosotros.team.eyebrow')}</Eyebrow>
+          <h2 className="h-1" style={{ marginTop: 14, maxWidth: '20ch' }}>{t('nosotros.team.title')}</h2>
           <div className="team-grid">
-            {[
-              ['Soporte e infra', '4 personas'],
-              ['Desarrollo de software', '5 personas'],
-              ['Ciberseguridad', '2 personas'],
-              ['Conectividad / IoT', '2 personas'],
-              ['Diseño y producto', '1 persona'],
-              ['Operaciones', '2 personas'],
-            ].map(([t, c], i) => (
-              <Reveal key={t} delay={i * 50}>
+            {teamRows.map(([title, count], i) => (
+              <Reveal key={title} delay={i * 50}>
                 <div className="team-cell">
-                  <div className="team-cell-h">{t}</div>
-                  <div className="mono team-cell-c">{c}</div>
+                  <div className="team-cell-h">{title}</div>
+                  <div className="mono team-cell-c">{count}</div>
                 </div>
               </Reveal>
             ))}
@@ -219,12 +230,12 @@ export default function Nosotros({ onGo }) {
         <div className="container">
           <div className="cta-final" style={{ borderRadius: 'var(--radius-xl)', padding: '56px', display: 'grid', gridTemplateColumns: '1.4fr auto', gap: 48, alignItems: 'center' }}>
             <div>
-              <h2 className="h-1" style={{ maxWidth: '20ch' }}>¿Hablamos de un proyecto juntos?</h2>
-              <p className="lede" style={{ marginTop: 16 }}>Te respondemos en menos de 48 hs.</p>
+              <h2 className="h-1" style={{ maxWidth: '20ch' }}>{t('nosotros.cta.title')}</h2>
+              <p className="lede" style={{ marginTop: 16 }}>{t('nosotros.cta.lede')}</p>
             </div>
             <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-              <button className="btn btn-primary btn-arrow" onClick={() => onGo('contacto')}>Contactar</button>
-              <a className="btn btn-ghost" href="https://wa.me/5493584314857" target="_blank" rel="noopener">WhatsApp</a>
+              <button className="btn btn-primary btn-arrow" onClick={() => onGo('contacto')}>{t('nosotros.cta.btn1')}</button>
+              <a className="btn btn-ghost" href="https://wa.me/5493584314857" target="_blank" rel="noopener">{t('nosotros.cta.btn2')}</a>
             </div>
           </div>
         </div>

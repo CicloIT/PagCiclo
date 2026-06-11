@@ -1,11 +1,22 @@
 import { useState } from 'react'
 import { Eyebrow } from '../components/ui'
+import { useTranslation } from '../context/TranslationContext'
 
 export default function Contacto({ onGo }) {
   const [sent, setSent] = useState(false)
-  const [topic, setTopic] = useState('Soporte')
+  const { t } = useTranslation()
+  const [topic, setTopic] = useState(t('contacto.topic.soporte'))
 
   const onSubmit = (e) => { e.preventDefault(); setSent(true) }
+
+  const topics = [
+    t('contacto.topic.soporte'),
+    t('contacto.topic.desarrollo'),
+    t('contacto.topic.starlink'),
+    t('contacto.topic.lorawan'),
+    t('contacto.topic.ciber'),
+    t('contacto.topic.otro'),
+  ]
 
   return (
     <main className="page">
@@ -20,18 +31,18 @@ export default function Contacto({ onGo }) {
         <div className="container">
           <div className="contact-grid">
             <div className="contact-side">
-              <Eyebrow>Contacto · Río Cuarto, AR</Eyebrow>
-              <h1 className="h-display" style={{ marginTop: 16, maxWidth: '12ch' }}>Hablemos.</h1>
+              <Eyebrow>{t('contacto.eyebrow')}</Eyebrow>
+              <h1 className="h-display" style={{ marginTop: 16, maxWidth: '12ch' }}>{t('contacto.title')}</h1>
               <p className="lede" style={{ marginTop: 24 }}>
-                Contanos qué necesitás resolver. Te respondemos en menos de 48 horas con un plan claro y sin compromiso.
+                {t('contacto.lede')}
               </p>
 
               <div className="contact-info">
                 {[
-                  ['Email', <a href="mailto:info@cicloit.com" className="contact-v">info@cicloit.com</a>],
-                  ['WhatsApp', <a href="https://wa.me/5493584314857" target="_blank" rel="noopener" className="contact-v">+54 9 358 431 4857</a>],
-                  ['Horario', <div className="contact-v">Lunes a Viernes · 9:00 a 18:00</div>],
-                  ['Dirección', <div className="contact-v">Río Cuarto, Córdoba, Argentina</div>],
+                  [t('contacto.email'), <a href="mailto:info@cicloit.com" className="contact-v">info@cicloit.com</a>],
+                  [t('contacto.whatsapp'), <a href="https://wa.me/5493584314857" target="_blank" rel="noopener" className="contact-v">+54 9 358 431 4857</a>],
+                  [t('contacto.horario'), <div className="contact-v">{t('contacto.hours')}</div>],
+                  [t('contacto.direccion'), <div className="contact-v">{t('contacto.address')}</div>],
                 ].map(([k, v]) => (
                   <div key={k} className="contact-info-row">
                     <div className="mono contact-k">{k}</div>
@@ -41,12 +52,15 @@ export default function Contacto({ onGo }) {
               </div>
 
               <div className="contact-quick">
-                <div className="mono" style={{ fontSize: 11, color: 'var(--text-muted)', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: 12 }}>Atajos</div>
+                <div className="mono" style={{ fontSize: 11, color: 'var(--text-muted)', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: 12 }}>{t('contacto.atajos')}</div>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-                  {['planes', 'starlink', 'lorawan', 'cursos'].map(p => (
-                    <button key={p} className="quick" onClick={() => onGo(p)}>
-                      {p === 'planes' ? 'Ver planes' : p === 'starlink' ? 'Instalar Starlink' : p === 'lorawan' ? 'Proyecto LoRaWAN' : 'Cursos'}
-                    </button>
+                  {[
+                    ['planes', t('contacto.quick.planes')],
+                    ['instalacion-starlink', t('contacto.quick.starlink')],
+                    ['lorawan', t('contacto.quick.lorawan')],
+                    ['cursos', t('contacto.quick.cursos')],
+                  ].map(([page, label]) => (
+                    <button key={page} className="quick" onClick={() => onGo(page)}>{label}</button>
                   ))}
                 </div>
               </div>
@@ -55,11 +69,11 @@ export default function Contacto({ onGo }) {
             <div className="contact-form-wrap">
               {!sent ? (
                 <form className="contact-form" onSubmit={onSubmit}>
-                  <div className="mono contact-form-h">/Mensaje nuevo</div>
+                  <div className="mono contact-form-h">{t('contacto.form.header')}</div>
 
                   <div className="field">
-                    <label htmlFor="c-nombre">Nombre</label>
-                    <input id="c-nombre" className="input" required placeholder="Tu nombre" />
+                    <label htmlFor="c-nombre">{t('contacto.form.nombre')}</label>
+                    <input id="c-nombre" className="input" required placeholder={t('contacto.form.nombrePh')} />
                   </div>
 
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
@@ -68,28 +82,28 @@ export default function Contacto({ onGo }) {
                       <input id="c-email" type="email" className="input" required placeholder="tu@email.com" />
                     </div>
                     <div className="field">
-                      <label htmlFor="c-empresa">Empresa</label>
-                      <input id="c-empresa" className="input" placeholder="Opcional" />
+                      <label htmlFor="c-empresa">{t('contacto.form.empresa')}</label>
+                      <input id="c-empresa" className="input" placeholder={t('contacto.form.empresaPh')} />
                     </div>
                   </div>
 
                   <div className="field">
-                    <label>Tema</label>
+                    <label>{t('contacto.form.tema')}</label>
                     <div className="topic-row">
-                      {['Soporte', 'Desarrollo', 'Starlink', 'LoRaWAN', 'Ciberseguridad', 'Otro'].map(t => (
-                        <button type="button" key={t} className={`topic ${topic === t ? 'is-on' : ''}`} onClick={() => setTopic(t)}>{t}</button>
+                      {topics.map(tp => (
+                        <button type="button" key={tp} className={`topic ${topic === tp ? 'is-on' : ''}`} onClick={() => setTopic(tp)}>{tp}</button>
                       ))}
                     </div>
                   </div>
 
                   <div className="field">
-                    <label htmlFor="c-msj">Mensaje</label>
-                    <textarea id="c-msj" className="textarea" required placeholder="Contanos brevemente qué necesitás" />
+                    <label htmlFor="c-msj">{t('contacto.form.mensaje')}</label>
+                    <textarea id="c-msj" className="textarea" required placeholder={t('contacto.form.mensajePh')} />
                   </div>
 
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
-                    <div className="mono" style={{ fontSize: 11, color: 'var(--text-faint)' }}>RESPUESTA EN &lt; 48 HS</div>
-                    <button type="submit" className="btn btn-primary btn-arrow">Enviar mensaje</button>
+                    <div className="mono" style={{ fontSize: 11, color: 'var(--text-faint)' }}>{t('contacto.form.respuesta')}</div>
+                    <button type="submit" className="btn btn-primary btn-arrow">{t('contacto.form.enviar')}</button>
                   </div>
                 </form>
               ) : (
@@ -100,11 +114,11 @@ export default function Contacto({ onGo }) {
                       <path d="M10 16.5l4 4 8-9" stroke="var(--primary)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </div>
-                  <h2 className="h-2" style={{ marginTop: 20 }}>Mensaje enviado.</h2>
-                  <p className="muted" style={{ marginTop: 10, fontSize: 15 }}>Te respondemos por email en menos de 48 horas. Si es urgente, escribinos por WhatsApp.</p>
+                  <h2 className="h-2" style={{ marginTop: 20 }}>{t('contacto.sent.title')}</h2>
+                  <p className="muted" style={{ marginTop: 10, fontSize: 15 }}>{t('contacto.sent.desc')}</p>
                   <div style={{ display: 'flex', gap: 12, marginTop: 28, flexWrap: 'wrap' }}>
-                    <a className="btn btn-primary" href="https://wa.me/5493584314857" target="_blank" rel="noopener">Abrir WhatsApp</a>
-                    <button className="btn btn-ghost" onClick={() => setSent(false)}>Enviar otro mensaje</button>
+                    <a className="btn btn-primary" href="https://wa.me/5493584314857" target="_blank" rel="noopener">{t('contacto.sent.wa')}</a>
+                    <button className="btn btn-ghost" onClick={() => setSent(false)}>{t('contacto.sent.otro')}</button>
                   </div>
                 </div>
               )}

@@ -41,6 +41,12 @@ function JabaliContent() {
                 <span className="text-green-800 font-semibold">Proyecto Innovador</span>
               </div>
               <LanguageSwitcher />
+              <a
+                href="/"
+                className="flex items-center gap-2 text-sm font-medium text-white bg-green-600 hover:bg-green-700 rounded-lg px-4 py-2 transition-colors shadow-sm"
+              >
+                ← CicloIT
+              </a>
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import { useState, useLayoutEffect } from 'react'
-import { BrowserRouter, Routes, Route, Navigate, useNavigate } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate, useNavigate, useLocation } from 'react-router-dom'
+import { TranslationProvider } from './context/TranslationContext'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
 import Home from './pages/Home'
@@ -14,6 +15,8 @@ import Jabali from './pages/Jabali'
 
 function AppInner() {
   const navigate = useNavigate()
+  const location = useLocation()
+  const isJabali = location.pathname === '/jabali'
   const [direction, setDirection] = useState('sharp')
 
   const go = (id) => {
@@ -31,12 +34,12 @@ function AppInner() {
 
   return (
     <div className="app">
-      <Nav onGo={go} />
+      {!isJabali && <Nav onGo={go} />}
       <Routes>
         <Route path="/" element={<Home onGo={go} />} />
         <Route path="/servicios" element={<Servicios onGo={go} />} />
         <Route path="/planes" element={<Planes onGo={go} />} />
-        <Route path="/starlink" element={<Starlink onGo={go} />} />
+        <Route path="/instalacion-starlink" element={<Starlink onGo={go} />} />
         <Route path="/lorawan" element={<LoRaWAN onGo={go} />} />
         <Route path="/nosotros" element={<Nosotros onGo={go} />} />
         <Route path="/cursos" element={<Cursos onGo={go} />} />
@@ -44,7 +47,7 @@ function AppInner() {
         <Route path="/jabali" element={<Jabali />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-      <Footer onGo={go} />
+      {!isJabali && <Footer onGo={go} />}
 
       <div className="dir-toggle">
         <button
@@ -85,7 +88,9 @@ function AppInner() {
 export default function App() {
   return (
     <BrowserRouter>
-      <AppInner />
+      <TranslationProvider>
+        <AppInner />
+      </TranslationProvider>
     </BrowserRouter>
   )
 }

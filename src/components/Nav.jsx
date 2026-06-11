@@ -1,16 +1,20 @@
 import { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
+import { useTranslation } from '../context/TranslationContext'
+import LanguageSwitcher from './LanguageSwitcher'
 
-const NAV_ITEMS = [
-  { id: 'home', label: 'Inicio' },
-  { id: 'servicios', label: 'Servicios' },
-  { id: 'planes', label: 'Planes' },
-  { id: 'starlink', label: 'Starlink' },
-  { id: 'lorawan', label: 'LoRaWAN' },
-  { id: 'nosotros', label: 'Nosotros' },
-  { id: 'cursos', label: 'Cursos' },
-  { id: 'contacto', label: 'Contacto' },
+const NAV_KEYS = [
+  { id: 'home', key: 'nav.home' },
+  { id: 'servicios', key: 'nav.servicios' },
+  { id: 'planes', key: 'nav.planes' },
+  { id: 'instalacion-starlink', key: 'nav.starlink' },
+  { id: 'lorawan', key: 'nav.lorawan' },
+  { id: 'nosotros', key: 'nav.nosotros' },
+  { id: 'cursos', key: 'nav.cursos' },
+  { id: 'contacto', key: 'nav.contacto' },
 ]
+
+const NAV_ITEMS = NAV_KEYS.map(({ id, key }) => ({ id, label: key }))
 
 export { NAV_ITEMS }
 
@@ -19,6 +23,7 @@ export default function Nav({ onGo }) {
   const [open, setOpen] = useState(false)
   const location = useLocation()
   const currentPage = location.pathname === '/' ? 'home' : location.pathname.slice(1)
+  const { t } = useTranslation()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12)
@@ -37,21 +42,22 @@ export default function Nav({ onGo }) {
         </button>
 
         <nav className="nav-links" aria-label="Principal">
-          {NAV_ITEMS.map(it => (
+          {NAV_KEYS.map(it => (
             <button
               key={it.id}
               className={`nav-link ${currentPage === it.id ? 'is-active' : ''}`}
               onClick={() => onGo(it.id)}
             >
-              {it.label}
+              {t(it.key)}
               {currentPage === it.id && <span className="nav-link-dot" aria-hidden />}
             </button>
           ))}
         </nav>
 
         <div className="nav-cta">
+          <LanguageSwitcher />
           <a className="btn btn-primary btn-arrow" href="https://wa.me/5493584314857" target="_blank" rel="noopener">
-            Hablemos
+            {t('nav.cta')}
           </a>
         </div>
 
@@ -62,14 +68,17 @@ export default function Nav({ onGo }) {
 
       {open && (
         <div className="nav-mobile">
-          {NAV_ITEMS.map(it => (
+          {NAV_KEYS.map(it => (
             <button key={it.id} className={`nav-mobile-link ${currentPage === it.id ? 'is-active' : ''}`} onClick={() => onGo(it.id)}>
-              {it.label}
+              {t(it.key)}
             </button>
           ))}
-          <a className="btn btn-primary" style={{ marginTop: 12 }} href="https://wa.me/5493584314857" target="_blank" rel="noopener">
-            Hablemos por WhatsApp
-          </a>
+          <div style={{ marginTop: 12, display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>
+            <LanguageSwitcher />
+            <a className="btn btn-primary" style={{ flex: 1 }} href="https://wa.me/5493584314857" target="_blank" rel="noopener">
+              {t('nav.ctaMobile')}
+            </a>
+          </div>
         </div>
       )}
 
@@ -99,7 +108,7 @@ export default function Nav({ onGo }) {
           position: absolute; bottom: 1px; left: 50%; transform: translateX(-50%);
           width: 4px; height: 4px; border-radius: 999px; background: var(--primary);
         }
-        .nav-cta{ display: flex; gap: 10px; }
+        .nav-cta{ display: flex; gap: 10px; align-items: center; }
         .nav-burger{ display: none; appearance: none; border: 0; background: transparent; flex-direction: column; gap: 4px; padding: 8px; }
         .nav-burger span{ width: 20px; height: 1.5px; background: var(--text); display: block; }
         .nav-mobile{ display: none; }

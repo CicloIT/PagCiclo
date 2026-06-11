@@ -1,81 +1,84 @@
 import { Reveal, Eyebrow, Tick, Arrow } from '../components/ui'
-
-const SERVICIOS = [
-  {
-    id: 'soporte', n: '01', t: 'Soporte y Mantenimiento',
-    img: '/soporte.webp',
-    short: 'Planes de soporte tecnológico continuo para mantener tu operación en marcha.',
-    body: 'Tres niveles diseñados para escalar con tu organización. Monitoreo, respuesta a incidentes, backups y mantenimiento preventivo. Sin sorpresas en la factura.',
-    bullets: ['Monitoreo 24/7', 'Backup redundante', 'Soporte multicanal', 'Reportes periódicos'],
-    tags: ['Infraestructura', 'Networking', 'Help desk'],
-    cta: 'planes',
-  },
-  {
-    id: 'web', n: '02', t: 'Páginas Web',
-    img: '/pag.webp',
-    short: 'Sitios institucionales y landings rápidas, accesibles y optimizadas para conversión.',
-    body: 'Desde landing pages para campañas hasta plataformas a medida. Stack moderno, SEO técnico, CMS si lo necesitás, performance medible.',
-    bullets: ['Next.js / Astro / WordPress', 'Core Web Vitals óptimos', 'Hosting + dominio + CDN', 'SEO técnico incluido'],
-    tags: ['Frontend', 'SEO', 'CMS'],
-  },
-  {
-    id: 'apps', n: '03', t: 'Aplicaciones Móviles',
-    img: '/Moda.webp',
-    imgStyle: { aspectRatio: '16/9' },
-    short: 'Apps nativas e híbridas para iOS y Android.',
-    body: 'Diseñamos UX, desarrollamos y publicamos. Aplicaciones que se sienten nativas, con sincronización offline y notificaciones push.',
-    bullets: ['React Native / Flutter / Swift / Kotlin', 'Publicación en App Store y Play Store', 'Integración con APIs y servicios cloud', 'Mantenimiento evolutivo'],
-    tags: ['iOS', 'Android', 'React Native'],
-  },
-  {
-    id: 'software', n: '04', t: 'Software a Medida',
-    img: '/Ordenes.webp',
-    imgStyle: { aspectRatio: '16/9' },
-    short: 'Aplicaciones web y de escritorio diseñadas para tu negocio.',
-    body: 'Cuando los productos enlatados no alcanzan. Levantamos requerimientos, diseñamos arquitectura y entregamos un sistema que respira con tu operación.',
-    bullets: ['Web apps · APIs · Microservicios', 'Sistemas internos y dashboards', 'Integraciones con ERPs y POS', 'Mantenimiento y evolución continua'],
-    tags: ['Node', '.NET', 'Postgres', 'Cloud'],
-  },
-  {
-    id: 'ciber', n: '05', t: 'Ciberseguridad',
-    img: '/ciberseguridad.webp',
-    imgStyle: { aspectRatio: '16/9' },
-    short: 'Protección avanzada para sistemas, redes y personas.',
-    body: 'Auditorías, hardening, respuesta a incidentes, capacitación interna y monitoreo continuo. Reducimos la superficie de ataque antes de que duela.',
-    bullets: ['Penetration testing y auditorías', 'Hardening de servidores y endpoints', 'Capacitación anti-phishing', 'Respuesta a incidentes 24/7'],
-    tags: ['Pentest', 'SOC', 'Compliance'],
-  },
-  {
-    id: 'lcg', n: '06', t: 'LcGestion',
-    img: '/lcgestion.webp',
-    imgStyle: { aspectRatio: '16/9' },
-    short: 'Sistema integral de gestión de recursos humanos.',
-    body: 'Producto propio. Liquidación de sueldos, control de presencia, legajos digitales, vacaciones y reportería. Adaptable a la operación de tu empresa.',
-    bullets: ['Liquidación de sueldos automatizada', 'Control de asistencia y horarios', 'Legajos digitales y certificados', 'Reportería ejecutiva'],
-    tags: ['RRHH', 'Producto propio', 'SaaS'],
-  },
-  {
-    id: 'starlink', n: '07', t: 'Instalación Starlink',
-    img: '/StarLink1.jpg',
-    imgStyle: { aspectRatio: '4/3' },
-    short: 'Internet satelital de alta velocidad donde la red convencional no llega.',
-    body: 'Relevamiento del sitio, importación o suministro del equipo, instalación profesional y puesta en marcha. Soporte continuo opcional.',
-    bullets: ['Starlink Estándar y Mini', 'Relevamiento sin cargo', 'Instalación + configuración', 'Soporte post-instalación'],
-    tags: ['Conectividad', 'Satelital'],
-    cta: 'starlink',
-  },
-  {
-    id: 'lorawan', n: '08', t: 'LoRaWAN / IoT',
-    img: '/Sensor4.jpeg',
-    short: 'Sensores de largo alcance y bajo consumo para monitoreo distribuido.',
-    body: 'Implementamos gateways, sensores y dashboards. Monitoreo de niveles, temperatura, humedad, energía y más, accesible desde cualquier lugar.',
-    bullets: ['Gateways y sensores LoRaWAN', 'Dashboards en la nube', 'Alertas automáticas', 'Integración con sistemas existentes'],
-    tags: ['IoT', 'Agro', 'Industria'],
-    cta: 'lorawan',
-  },
-]
+import { useTranslation } from '../context/TranslationContext'
 
 export default function Servicios({ onGo }) {
+  const { t } = useTranslation()
+
+  const SERVICIOS = [
+    {
+      id: 'soporte', n: '01', title: t('svc.soporte.title'),
+      img: '/soporte.webp',
+      short: t('svc.soporte.short'),
+      body: t('svc.soporte.body'),
+      bullets: [t('svc.soporte.b1'), t('svc.soporte.b2'), t('svc.soporte.b3'), t('svc.soporte.b4')],
+      tags: ['Infraestructura', 'Networking', 'Help desk'],
+      cta: 'planes',
+    },
+    {
+      id: 'web', n: '02', title: t('svc.web.title'),
+      img: '/pag.webp',
+      short: t('svc.web.short'),
+      body: t('svc.web.body'),
+      bullets: [t('svc.web.b1'), t('svc.web.b2'), t('svc.web.b3'), t('svc.web.b4')],
+      tags: ['Frontend', 'SEO', 'CMS'],
+    },
+    {
+      id: 'apps', n: '03', title: t('svc.apps.title'),
+      img: '/Moda.webp',
+      imgStyle: { aspectRatio: '16/9' },
+      short: t('svc.apps.short'),
+      body: t('svc.apps.body'),
+      bullets: [t('svc.apps.b1'), t('svc.apps.b2'), t('svc.apps.b3'), t('svc.apps.b4')],
+      tags: ['iOS', 'Android', 'React Native'],
+    },
+    {
+      id: 'software', n: '04', title: t('svc.software.title'),
+      img: '/Ordenes.webp',
+      imgStyle: { aspectRatio: '16/9' },
+      short: t('svc.software.short'),
+      body: t('svc.software.body'),
+      bullets: [t('svc.software.b1'), t('svc.software.b2'), t('svc.software.b3'), t('svc.software.b4')],
+      tags: ['Node', '.NET', 'Postgres', 'Cloud'],
+    },
+    {
+      id: 'ciber', n: '05', title: t('svc.ciber.title'),
+      img: '/ciberseguridad.webp',
+      imgStyle: { aspectRatio: '16/9' },
+      short: t('svc.ciber.short'),
+      body: t('svc.ciber.body'),
+      bullets: [t('svc.ciber.b1'), t('svc.ciber.b2'), t('svc.ciber.b3'), t('svc.ciber.b4')],
+      tags: ['Pentest', 'SOC', 'Compliance'],
+    },
+    {
+      id: 'lcg', n: '06', title: t('svc.lcg.title'),
+      img: '/lcgestion.webp',
+      imgStyle: { aspectRatio: '16/9' },
+      short: t('svc.lcg.short'),
+      body: t('svc.lcg.body'),
+      bullets: [t('svc.lcg.b1'), t('svc.lcg.b2'), t('svc.lcg.b3'), t('svc.lcg.b4')],
+      tags: ['RRHH', 'Producto propio', 'SaaS'],
+    },
+    {
+      id: 'starlink', n: '07', title: t('svc.starlink.title'),
+      img: '/StarLink800x1067.png',
+      imgStyle: { aspectRatio: '4/3' },
+      short: t('svc.starlink.short'),
+      body: t('svc.starlink.body'),
+      bullets: [t('svc.starlink.b1'), t('svc.starlink.b2'), t('svc.starlink.b3'), t('svc.starlink.b4')],
+      tags: ['Conectividad', 'Satelital'],
+      cta: 'instalacion-starlink',
+    },
+    {
+      id: 'lorawan', n: '08', title: t('svc.lorawan.title'),
+      img: '/Sensor4.jpeg',
+      short: t('svc.lorawan.short'),
+      body: t('svc.lorawan.body'),
+      bullets: [t('svc.lorawan.b1'), t('svc.lorawan.b2'), t('svc.lorawan.b3'), t('svc.lorawan.b4')],
+      tags: ['IoT', 'Agro', 'Industria'],
+      cta: 'lorawan',
+    },
+  ]
+
   return (
     <main className="page">
       <title>Servicios — CicloIT | Soporte IT, Software, Ciberseguridad, Starlink, LoRaWAN</title>
@@ -85,16 +88,16 @@ export default function Servicios({ onGo }) {
       <meta property="og:url" content="https://cicloit.com/servicios" />
       <meta property="og:type" content="website" />
       <link rel="canonical" href="https://cicloit.com/servicios" />
+
       {/* HERO */}
       <section className="section section-tight" style={{ paddingTop: 'calc(var(--pad-section) * .6)' }}>
         <div className="container">
-          <Eyebrow>Servicios · 2026</Eyebrow>
+          <Eyebrow>{t('svc.page.eyebrow')}</Eyebrow>
           <h1 className="h-display" style={{ marginTop: 16, maxWidth: '16ch' }}>
-            Todo lo que necesitás<br/>en un solo equipo.
+            {t('svc.page.title')}
           </h1>
           <p className="lede" style={{ marginTop: 24, maxWidth: '60ch' }}>
-            Desde el cable hasta la nube. Ocho líneas de servicio que pueden contratarse
-            por separado o combinarse en un plan integral.
+            {t('svc.page.lede')}
           </p>
         </div>
       </section>
@@ -111,7 +114,7 @@ export default function Servicios({ onGo }) {
                 onClick={(e) => { e.preventDefault(); document.getElementById(s.id)?.scrollIntoView({ behavior: 'smooth', block: 'start' }) }}
               >
                 <span className="mono srv-index-n">{s.n}</span>
-                <span className="srv-index-t">{s.t}</span>
+                <span className="srv-index-t">{s.title}</span>
                 <span className="srv-index-arrow"><Arrow /></span>
               </a>
             ))}
@@ -143,7 +146,7 @@ export default function Servicios({ onGo }) {
               </div>
               <div className="srv-block-main">
                 <Reveal>
-                  <h2 className="h-1">{s.t}</h2>
+                  <h2 className="h-1">{s.title}</h2>
                   <p className="lede" style={{ marginTop: 18 }}>{s.short}</p>
                   <p className="muted" style={{ marginTop: 14, fontSize: 15, maxWidth: '62ch' }}>{s.body}</p>
                   <ul className="srv-bullets">
@@ -151,13 +154,13 @@ export default function Servicios({ onGo }) {
                   </ul>
                   {s.cta && (
                     <button className="btn btn-ghost btn-arrow" style={{ marginTop: 32 }} onClick={() => onGo(s.cta)}>
-                      Ver más
+                      {t('svc.seeMore')}
                     </button>
                   )}
                 </Reveal>
               </div>
               <div className="srv-block-visual img-wrap">
-                <img src={s.img} alt={s.t} className="img-cover" style={{ aspectRatio: '4/5', ...s.imgStyle }} />
+                <img src={s.img} alt={s.title} className="img-cover" style={{ aspectRatio: '4/5', ...s.imgStyle }} />
               </div>
             </div>
           </div>
@@ -177,12 +180,12 @@ export default function Servicios({ onGo }) {
         <div className="container">
           <div className="cta-band" style={{ border: '1px solid var(--border-strong)', borderRadius: 'var(--radius-xl)', padding: '56px', display: 'flex', gap: 48, alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap' }}>
             <div>
-              <Eyebrow>Empecemos</Eyebrow>
-              <h2 className="h-1" style={{ marginTop: 12, maxWidth: '22ch' }}>¿Cuál de estos servicios necesitás resolver primero?</h2>
+              <Eyebrow>{t('svc.cta.eyebrow')}</Eyebrow>
+              <h2 className="h-1" style={{ marginTop: 12, maxWidth: '22ch' }}>{t('svc.cta.title')}</h2>
             </div>
             <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-              <button className="btn btn-primary btn-arrow" onClick={() => onGo('contacto')}>Hablemos</button>
-              <button className="btn btn-ghost" onClick={() => onGo('planes')}>Ver planes</button>
+              <button className="btn btn-primary btn-arrow" onClick={() => onGo('contacto')}>{t('svc.cta.btn1')}</button>
+              <button className="btn btn-ghost" onClick={() => onGo('planes')}>{t('svc.cta.btn2')}</button>
             </div>
           </div>
         </div>

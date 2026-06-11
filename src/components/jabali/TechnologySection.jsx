@@ -116,7 +116,7 @@ export function TechnologySection() {
               ))}
             </div>
             <div className="w-full h-48 rounded-lg overflow-hidden shadow-md">
-              <img src="/StarLink1.jpg" alt={t('tecnologia.starlink.alt_img')} className="w-full h-full object-cover rounded-lg" />
+              <img src="/StarLink800x1067.png" alt={t('tecnologia.starlink.alt_img')} className="w-full h-full object-cover rounded-lg" />
             </div>
           </div>
         </div>

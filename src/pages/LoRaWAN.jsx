@@ -1,6 +1,25 @@
 import { Reveal, Eyebrow, Tick } from '../components/ui'
+import { useTranslation } from '../context/TranslationContext'
 
 export default function LoRaWAN({ onGo }) {
+  const { t } = useTranslation()
+
+  const whyItems = [
+    { k: t('lorawan.why.alcance.k'), v: t('lorawan.why.alcance.v'), d: t('lorawan.why.alcance.d') },
+    { k: t('lorawan.why.consumo.k'), v: t('lorawan.why.consumo.v'), d: t('lorawan.why.consumo.d') },
+    { k: t('lorawan.why.costo.k'), v: t('lorawan.why.costo.v'), d: t('lorawan.why.costo.d') },
+    { k: t('lorawan.why.escala.k'), v: t('lorawan.why.escala.v'), d: t('lorawan.why.escala.d') },
+  ]
+
+  const apps = [
+    { title: t('lorawan.apps.a1.title'), desc: t('lorawan.apps.a1.desc') },
+    { title: t('lorawan.apps.a2.title'), desc: t('lorawan.apps.a2.desc') },
+    { title: t('lorawan.apps.a3.title'), desc: t('lorawan.apps.a3.desc') },
+    { title: t('lorawan.apps.a4.title'), desc: t('lorawan.apps.a4.desc') },
+    { title: t('lorawan.apps.a5.title'), desc: t('lorawan.apps.a5.desc') },
+    { title: t('lorawan.apps.a6.title'), desc: t('lorawan.apps.a6.desc') },
+  ]
+
   return (
     <main className="page">
       <title>Redes LoRaWAN e IoT — CicloIT | Sensores y Conectividad Rural</title>
@@ -10,23 +29,23 @@ export default function LoRaWAN({ onGo }) {
       <meta property="og:url" content="https://cicloit.com/lorawan" />
       <meta property="og:type" content="website" />
       <link rel="canonical" href="https://cicloit.com/lorawan" />
+
       {/* HERO */}
       <section className="section section-tight" style={{ paddingTop: 'calc(var(--pad-section) * .55)' }}>
         <div className="container">
           <div className="g-grid g-grid-2 g-gap-lg" style={{ alignItems: 'center' }}>
             <div>
               <Reveal>
-                <Eyebrow>LoRaWAN · IoT</Eyebrow>
+                <Eyebrow>{t('lorawan.eyebrow')}</Eyebrow>
                 <h1 className="h-display" style={{ marginTop: 16, maxWidth: '14ch' }}>
-                  Medir, monitorear, automatizar.
+                  {t('lorawan.title')}
                 </h1>
                 <p className="lede" style={{ marginTop: 24 }}>
-                  Implementamos redes LoRaWAN de largo alcance y bajo consumo para industria, agro y ciudades.
-                  Sensores distribuidos, dashboards en la nube, alertas en tiempo real.
+                  {t('lorawan.lede')}
                 </p>
                 <div style={{ display: 'flex', gap: 12, marginTop: 32, flexWrap: 'wrap' }}>
-                  <button className="btn btn-primary btn-arrow" onClick={() => onGo('contacto')}>Cotizar un proyecto</button>
-                  <button className="btn btn-ghost" onClick={() => onGo('jabali')}>Caso Proyecto Jabalí →</button>
+                  <button className="btn btn-primary btn-arrow" onClick={() => onGo('contacto')}>{t('lorawan.cta1')}</button>
+                  <button className="btn btn-ghost" onClick={() => onGo('jabali')}>{t('lorawan.cta2')}</button>
                 </div>
               </Reveal>
             </div>
@@ -42,15 +61,10 @@ export default function LoRaWAN({ onGo }) {
       {/* WHY LORAWAN */}
       <section className="section section-tight">
         <div className="container">
-          <Eyebrow>Por qué LoRaWAN</Eyebrow>
-          <h2 className="h-1" style={{ marginTop: 14, maxWidth: '20ch' }}>Tecnología pensada para el campo, no para la oficina.</h2>
+          <Eyebrow>{t('lorawan.why.eyebrow')}</Eyebrow>
+          <h2 className="h-1" style={{ marginTop: 14, maxWidth: '20ch' }}>{t('lorawan.why.title')}</h2>
           <div className="g-grid g-grid-4 g-gap-md" style={{ marginTop: 40 }}>
-            {[
-              { k: 'Alcance', v: 'Hasta 15 km', d: 'Un solo gateway cubre un establecimiento completo.' },
-              { k: 'Consumo', v: '5–10 años', d: 'Sensores a batería que duran sin recargar.' },
-              { k: 'Costo', v: 'Sin SIM', d: 'Red privada, sin cargo por dispositivo.' },
-              { k: 'Escala', v: '1000+ nodos', d: 'Cada gateway soporta miles de dispositivos.' },
-            ].map((s, i) => (
+            {whyItems.map((s, i) => (
               <Reveal key={s.k} delay={i * 60}>
                 <div className="lr-stat">
                   <div className="mono" style={{ fontSize: 11, color: 'var(--text-muted)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>{s.k}</div>
@@ -69,22 +83,15 @@ export default function LoRaWAN({ onGo }) {
       {/* APPLICATIONS */}
       <section className="section">
         <div className="container">
-          <Eyebrow>Aplicaciones</Eyebrow>
-          <h2 className="h-1" style={{ marginTop: 14, maxWidth: '20ch' }}>Qué se puede medir.</h2>
+          <Eyebrow>{t('lorawan.apps.eyebrow')}</Eyebrow>
+          <h2 className="h-1" style={{ marginTop: 14, maxWidth: '20ch' }}>{t('lorawan.apps.title')}</h2>
           <div className="lr-apps">
-            {[
-              { t: 'Sensores IoT', d: 'Niveles de tanques y silos, temperatura, humedad, movimiento, energía, calidad de aire, presión y más.' },
-              { t: 'Monitoreo en tiempo real', d: 'Visualización en dashboards web y mobile desde cualquier lugar. Histórico, comparativas, exportes.' },
-              { t: 'Automatización remota', d: 'Activación a distancia de bombas, alarmas, válvulas, motores y sistemas de control.' },
-              { t: 'Alertas inteligentes', d: 'Notificaciones por WhatsApp, email o webhook cuando algo se sale del rango esperado.' },
-              { t: 'Integración con ERPs', d: 'Conectamos los datos con tu sistema de gestión, BI o plataforma de operaciones.' },
-              { t: 'Trazabilidad', d: 'Seguimiento de activos móviles dentro del establecimiento o ruta logística.' },
-            ].map((a, i) => (
-              <Reveal key={a.t} delay={i * 50}>
+            {apps.map((a, i) => (
+              <Reveal key={a.title} delay={i * 50}>
                 <div className="lr-app">
                   <span className="lr-app-dot" />
-                  <h3 className="h-3">{a.t}</h3>
-                  <p className="muted" style={{ marginTop: 8, fontSize: 14 }}>{a.d}</p>
+                  <h3 className="h-3">{a.title}</h3>
+                  <p className="muted" style={{ marginTop: 8, fontSize: 14 }}>{a.desc}</p>
                 </div>
               </Reveal>
             ))}
@@ -108,19 +115,18 @@ export default function LoRaWAN({ onGo }) {
               <img src="/infra-jabali.jpeg" alt="Proyecto Jabalí · monitoreo de fauna con LoRaWAN" className="img-cover" style={{ height: '100%' }} />
             </div>
             <div>
-              <Eyebrow>Caso destacado</Eyebrow>
-              <h2 className="h-1" style={{ marginTop: 12 }}>Proyecto Jabalí</h2>
+              <Eyebrow>{t('lorawan.case.eyebrow')}</Eyebrow>
+              <h2 className="h-1" style={{ marginTop: 12 }}>{t('lorawan.case.title')}</h2>
               <p className="lede" style={{ marginTop: 18 }}>
-                Aplicamos LoRaWAN al monitoreo de fauna silvestre en colaboración con investigadores y productores.
-                Sensores de movimiento, cámaras-trampa integradas y alertas geo-referenciadas en tiempo real.
+                {t('lorawan.case.lede')}
               </p>
               <ul className="lr-case-list">
-                <li><Tick />Red de sensores distribuidos en zonas rurales</li>
-                <li><Tick />Dashboard en la nube con histórico y mapa de calor</li>
-                <li><Tick />Alertas automáticas a productores afectados</li>
+                <li><Tick />{t('lorawan.case.b1')}</li>
+                <li><Tick />{t('lorawan.case.b2')}</li>
+                <li><Tick />{t('lorawan.case.b3')}</li>
               </ul>
               <button className="btn btn-ghost btn-arrow" onClick={() => onGo('jabali')} style={{ marginTop: 28 }}>
-                Ver el proyecto completo
+                {t('lorawan.case.cta')}
               </button>
             </div>
           </div>
@@ -138,12 +144,12 @@ export default function LoRaWAN({ onGo }) {
         <div className="container">
           <div className="cta-final" style={{ borderRadius: 'var(--radius-xl)', padding: '56px', display: 'grid', gridTemplateColumns: '1.4fr auto', gap: 48, alignItems: 'center' }}>
             <div>
-              <h2 className="h-1" style={{ maxWidth: '22ch' }}>¿Tenés algo que querés medir en tiempo real?</h2>
-              <p className="lede" style={{ marginTop: 16 }}>Te ayudamos a diseñar la red y los sensores que necesitás.</p>
+              <h2 className="h-1" style={{ maxWidth: '22ch' }}>{t('lorawan.cta.title')}</h2>
+              <p className="lede" style={{ marginTop: 16 }}>{t('lorawan.cta.lede')}</p>
             </div>
             <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-              <button className="btn btn-primary btn-arrow" onClick={() => onGo('contacto')}>Conversar</button>
-              <a className="btn btn-ghost" href="https://wa.me/5493584314857" target="_blank" rel="noopener">WhatsApp</a>
+              <button className="btn btn-primary btn-arrow" onClick={() => onGo('contacto')}>{t('lorawan.cta.btn1')}</button>
+              <a className="btn btn-ghost" href="https://wa.me/5493584314857" target="_blank" rel="noopener">{t('lorawan.cta.btn2')}</a>
             </div>
           </div>
         </div>
