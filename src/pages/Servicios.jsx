@@ -66,6 +66,7 @@ export default function Servicios({ onGo }) {
       id: 'starlink', n: '07', title: t('svc.starlink.title'),
       img: '/StarLink800x1067.png',
       imgPos: 'bottom',
+      imgScale: 1.2,
       short: t('svc.starlink.short'),
       body: t('svc.starlink.body'),
       bullets: [t('svc.starlink.b1'), t('svc.starlink.b2'), t('svc.starlink.b3'), t('svc.starlink.b4')],
@@ -75,6 +76,7 @@ export default function Servicios({ onGo }) {
     {
       id: 'lorawan', n: '08', title: t('svc.lorawan.title'),
       img: '/Sensor4.jpeg',
+      imgPos: 'center 65%',
       short: t('svc.lorawan.short'),
       body: t('svc.lorawan.body'),
       bullets: [t('svc.lorawan.b1'), t('svc.lorawan.b2'), t('svc.lorawan.b3'), t('svc.lorawan.b4')],
@@ -144,7 +146,15 @@ export default function Servicios({ onGo }) {
               <Reveal key={s.id} delay={(i % 2) * 60}>
                 <article id={s.id} className="srv-card-full">
                   <div className="srv-card-full-visual img-wrap">
-                    <img src={s.img} alt={s.title} className="img-cover" style={s.imgPos ? { objectPosition: s.imgPos } : undefined} />
+                    <img
+                      src={s.img}
+                      alt={s.title}
+                      className="img-cover"
+                      style={{
+                        ...(s.imgPos ? { objectPosition: s.imgPos } : null),
+                        ...(s.imgScale ? { transform: `scale(${s.imgScale})`, transformOrigin: 'center bottom' } : null),
+                      }}
+                    />
                   </div>
                   <div className="srv-card-full-body">
                     <div className="srv-card-full-head">
