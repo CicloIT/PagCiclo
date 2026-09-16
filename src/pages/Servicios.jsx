@@ -65,8 +65,7 @@ export default function Servicios({ onGo }) {
     {
       id: 'starlink', n: '07', title: t('svc.starlink.title'),
       img: '/StarLink800x1067.png',
-      imgPos: 'bottom',
-      imgScale: 1.2,
+      imgPos: 'center 70%',
       short: t('svc.starlink.short'),
       body: t('svc.starlink.body'),
       bullets: [t('svc.starlink.b1'), t('svc.starlink.b2'), t('svc.starlink.b3'), t('svc.starlink.b4')],
