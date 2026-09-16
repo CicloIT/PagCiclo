@@ -1,12 +1,14 @@
 import { createContext, useContext, useState } from 'react'
 import jabaliEs from '../locales/jabali_es.json'
 import jabaliEn from '../locales/jabali_en.json'
+import lagunitaEs from '../locales/lagunita_es.json'
+import lagunitaEn from '../locales/lagunita_en.json'
 import siteEs from '../locales/es.json'
 import siteEn from '../locales/en.json'
 
 const translations = {
-  es: { ...jabaliEs, ...siteEs },
-  en: { ...jabaliEn, ...siteEn },
+  es: { ...jabaliEs, ...lagunitaEs, ...siteEs },
+  en: { ...jabaliEn, ...lagunitaEn, ...siteEn },
 }
 
 const getNestedValue = (obj, path) => {

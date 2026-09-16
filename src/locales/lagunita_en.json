@@ -1,0 +1,41 @@
+{
+  "lagunita": {
+    "titulo": "Rural Connectivity Project",
+    "subtitulo": "CicloIT CCC · Telecommunications Infrastructure",
+    "badge": "Community Connectivity",
+    "hero": {
+      "titulo": "Internet isn't a luxury.\nIt's a right.",
+      "descripcion": "Deep in the hills of Córdoba, we work to bring connectivity where telecom companies don't go. We design and deploy telecommunications infrastructure adapted to rural and hard-to-reach environments."
+    },
+    "mision": "We believe distance shouldn't be a barrier to education, work, or communication. That's why we participate in connectivity initiatives for those who need it most.",
+    "stats": {
+      "red": { "valor": "WiFi", "label": "Wireless networks" },
+      "lorawan": { "valor": "LoRa", "label": "Long range" },
+      "enlace": { "valor": "RF", "label": "Radio links" },
+      "entorno": { "valor": "Rural", "label": "Mountain & highlands" }
+    },
+    "proyecto": {
+      "titulo": "How we do it",
+      "descripcion": "We work on the design, deployment, and maintenance of telecommunications infrastructure for rural and hard-to-reach environments. Our team carries out technical surveys, structure installation, wireless link configuration, and commissioning of connectivity solutions tailored to each need.",
+      "trabajo": "We climb hills, install towers, and configure wireless links in areas where no commercial provider operates. We work collaboratively and with commitment, contributing technical expertise at every stage of the project."
+    },
+    "educacion": {
+      "titulo": "Connected school, open future",
+      "descripcion": "One of the project's priorities is ensuring access to educational platforms, digital materials, and communication tools for teachers and students in rural areas.",
+      "capacitaciones": "We also organize open workshops on Meshtastic and community networking — because the best infrastructure is the kind the community itself can maintain and grow."
+    },
+    "innovacion": {
+      "titulo": "The next frontier: LoRaWAN",
+      "descripcion": "As part of the project, we're integrating LoRaWAN technology — long-range, ultra-low-power communication — to build reliable links even where line-of-sight between the hills is a challenge.",
+      "futuro": "This phase enables environmental monitoring, distributed sensors, and a community network with autonomous growth capacity. A homegrown tech ecosystem, built from the inside out."
+    },
+    "galeria": {
+      "titulo": "The project in pictures",
+      "subtitulo": "Towers, cables, hills, and people. This is what community infrastructure looks like."
+    },
+    "footer": {
+      "descripcion": "A community connectivity initiative in the hills of Córdoba, Argentina. CicloIT CCC contributes technical expertise in infrastructure design, installation, and maintenance.",
+      "derechos": "© 2025 CicloIT CCC · Rural Connectivity Project · Telecommunications infrastructure."
+    }
+  }
+}

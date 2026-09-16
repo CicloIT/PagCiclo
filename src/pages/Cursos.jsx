@@ -6,7 +6,9 @@ export default function Cursos({ onGo }) {
 
   const CURSOS = [
     { lvl: t('cursos.c1.lvl'), title: t('cursos.c1.title'), desc: t('cursos.c1.desc'), dur: t('cursos.c1.dur'), mod: t('cursos.c1.mod'), cupo: t('cursos.c1.cupo') },
-    { lvl: t('cursos.c2.lvl'), title: t('cursos.c2.title'), desc: t('cursos.c2.desc'), dur: t('cursos.c2.dur'), mod: t('cursos.c2.mod'), cupo: t('cursos.c2.cupo') },
+    /*
+    { lvl: t('cursos.c2.lvl'), title: t('cursos.c2.title'), desc: t('cursos.c2.desc'), dur: t('cursos.c2.dur'), mod: t('cursos.c2.mod'), cupo: t('cursos.c2.cupo') },*/
+     
     { lvl: t('cursos.c3.lvl'), title: t('cursos.c3.title'), desc: t('cursos.c3.desc'), dur: t('cursos.c3.dur'), mod: t('cursos.c3.mod'), cupo: t('cursos.c3.cupo') },
     { lvl: t('cursos.c4.lvl'), title: t('cursos.c4.title'), desc: t('cursos.c4.desc'), dur: t('cursos.c4.dur'), mod: t('cursos.c4.mod'), cupo: t('cursos.c4.cupo') },
     { lvl: t('cursos.c5.lvl'), title: t('cursos.c5.title'), desc: t('cursos.c5.desc'), dur: t('cursos.c5.dur'), mod: t('cursos.c5.mod'), cupo: t('cursos.c5.cupo') },

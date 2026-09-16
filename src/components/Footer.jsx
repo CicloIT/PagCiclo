@@ -69,6 +69,10 @@ export default function Footer({ onGo }) {
 
         <div className="footer-bottom">
           <div className="mono" style={{ fontSize: 12, color: 'var(--text-faint)' }}>{t('footer.copyright')}</div>
+          <div style={{ display: 'flex', gap: 20 }}>
+            <button className="mono footer-legal-link" onClick={() => onGo('privacidad')}>{t('footer.legal.privacidad')}</button>
+            <button className="mono footer-legal-link" onClick={() => onGo('terminos')}>{t('footer.legal.terminos')}</button>
+          </div>
           <div className="mono" style={{ fontSize: 12, color: 'var(--text-faint)' }}>{t('footer.credit')}</div>
         </div>
       </div>
@@ -87,7 +91,9 @@ export default function Footer({ onGo }) {
           transition: border-color .15s ease, color .15s ease, background-color .15s ease;
         }
         .footer-social:hover{ border-color: var(--primary); color: var(--primary); background: var(--primary-soft); }
-        .footer-bottom{ margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+        .footer-bottom{ margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+        .footer-legal-link{ appearance: none; background: transparent; border: 0; padding: 0; font-size: 12px; color: var(--text-faint); }
+        .footer-legal-link:hover{ color: var(--primary); }
         @media (max-width: 900px){ .footer-grid{ grid-template-columns: 1fr 1fr; } }
         @media (max-width: 600px){ .footer-grid{ grid-template-columns: 1fr; } }
       `}</style>

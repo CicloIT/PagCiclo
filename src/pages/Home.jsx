@@ -56,7 +56,7 @@ export default function Home({ onGo }) {
 
   const services = [
     { n: '01', title: t('home.svc.01.title'), desc: t('home.svc.01.desc'), tags: ['Next.js', 'Astro', 'WordPress'] },
-    { n: '02', title: t('home.svc.02.title'), desc: t('home.svc.02.desc'), tags: ['React Native', 'Flutter'] },
+    { n: '02', title: t('home.svc.02.title'), desc: t('home.svc.02.desc'), tags: ['Ruletas', 'Trivias', 'Eventos'] },
     { n: '03', title: t('home.svc.03.title'), desc: t('home.svc.03.desc'), tags: ['Node', 'Postgres', '.NET'] },
     { n: '04', title: t('home.svc.04.title'), desc: t('home.svc.04.desc'), tags: ['SOC', 'Pentest', 'EDR'] },
     { n: '05', title: t('home.svc.05.title'), desc: t('home.svc.05.desc'), tags: ['RRHH', 'Liquidación'] },

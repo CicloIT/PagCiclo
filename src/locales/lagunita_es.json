@@ -1,0 +1,41 @@
+{
+  "lagunita": {
+    "titulo": "Proyecto Conectividad Rural",
+    "subtitulo": "CicloIT CCC · Infraestructura de telecomunicaciones",
+    "badge": "Conectividad Comunitaria",
+    "hero": {
+      "titulo": "Internet no es un lujo.\nEs un derecho.",
+      "descripcion": "En las sierras de Córdoba, trabajamos para llevar conectividad a donde las empresas no llegan. Diseñamos e instalamos infraestructura de telecomunicaciones adaptada a entornos rurales y de difícil acceso."
+    },
+    "mision": "Creemos que la distancia no debería ser un obstáculo para la educación, el trabajo ni la comunicación. Por eso participamos en iniciativas de conectividad para quienes más la necesitan.",
+    "stats": {
+      "red": { "valor": "WiFi", "label": "Redes inalámbricas" },
+      "lorawan": { "valor": "LoRa", "label": "Largo alcance" },
+      "enlace": { "valor": "RF", "label": "Radioenlaces" },
+      "entorno": { "valor": "Rural", "label": "Montaña y sierras" }
+    },
+    "proyecto": {
+      "titulo": "Cómo lo hacemos",
+      "descripcion": "Trabajamos en el diseño, despliegue y mantenimiento de infraestructura de telecomunicaciones para entornos rurales y de difícil acceso. Nuestro equipo realiza relevamientos técnicos, instalación de estructuras, configuración de enlaces inalámbricos y puesta en marcha de soluciones de conectividad adaptadas a cada necesidad.",
+      "trabajo": "Subimos cerros, instalamos torres y configuramos enlaces inalámbricos en zonas donde ningún proveedor comercial opera. Trabajamos de forma colaborativa y comprometida, aportando capacidad técnica en cada etapa del proyecto."
+    },
+    "educacion": {
+      "titulo": "Escuela conectada, futuro abierto",
+      "descripcion": "Una de las prioridades del proyecto es garantizar acceso a plataformas educativas, materiales digitales y herramientas de comunicación para docentes y estudiantes en zonas rurales.",
+      "capacitaciones": "También organizamos talleres abiertos sobre Meshtastic y redes comunitarias, porque la mejor infraestructura es la que la propia comunidad puede sostener y hacer crecer."
+    },
+    "innovacion": {
+      "titulo": "La próxima frontera: LoRaWAN",
+      "descripcion": "Como parte del proyecto, estamos integrando tecnología LoRaWAN — comunicación de largo alcance y bajísimo consumo — para establecer enlaces confiables incluso donde la línea de vista entre los cerros es un desafío.",
+      "futuro": "Esta etapa habilita monitoreo ambiental, sensores distribuidos y una red comunitaria con capacidad de crecimiento autónomo. Un ecosistema tecnológico construido desde adentro."
+    },
+    "galeria": {
+      "titulo": "El proyecto en imágenes",
+      "subtitulo": "Torres, cables, sierras y personas. Así se ve la infraestructura comunitaria."
+    },
+    "footer": {
+      "descripcion": "Una iniciativa de conectividad comunitaria en las sierras de Córdoba, Argentina. CicloIT CCC aporta capacidad técnica en diseño, instalación y mantenimiento de infraestructura.",
+      "derechos": "© 2025 CicloIT CCC · Proyecto Conectividad Rural · Infraestructura de telecomunicaciones."
+    }
+  }
+}

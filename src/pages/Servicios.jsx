@@ -23,13 +23,21 @@ export default function Servicios({ onGo }) {
       tags: ['Frontend', 'SEO', 'CMS'],
     },
     {
-      id: 'apps', n: '03', title: t('svc.apps.title'),
-      img: '/Moda.webp',
+      id: 'games', n: '03', title: t('svc.games.title'),
+      img: '/juegos.webp',
       imgStyle: { aspectRatio: '16/9' },
-      short: t('svc.apps.short'),
-      body: t('svc.apps.body'),
-      bullets: [t('svc.apps.b1'), t('svc.apps.b2'), t('svc.apps.b3'), t('svc.apps.b4')],
-      tags: ['iOS', 'Android', 'React Native'],
+      short: t('svc.games.short'),
+      body: t('svc.games.body'),
+      bullets: [t('svc.games.b1'), t('svc.games.b2'), t('svc.games.b3'), t('svc.games.b4')],
+      tags: ['Gamificación', 'Eventos', 'Educación'],
+      links: [
+        { label: 'Agda', url: 'https://agda.cicloit.com' },
+        { label: 'Trivia', url: 'https://trivia.cicloit.com/' },
+        { label: 'Memo', url: 'https://memo.cicloit.com/' },
+        { label: 'JuegoCiber', url: 'https://cicloit.github.io/juegoCiber/' },
+        { label: 'AgronomyTech', url: 'https://cicloit.github.io/AgronomyTech/' },
+        { label: 'Puntal', url: 'https://cicloit.github.io/puntal/' },
+      ],
     },
     {
       id: 'software', n: '04', title: t('svc.software.title'),
@@ -152,6 +160,13 @@ export default function Servicios({ onGo }) {
                   <ul className="srv-bullets">
                     {s.bullets.map(b => <li key={b}><Tick />{b}</li>)}
                   </ul>
+                  {s.links && (
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginTop: 20 }}>
+                      {s.links.map(l => (
+                        <a key={l.url} href={l.url} target="_blank" rel="noopener" className="tag">{l.label}</a>
+                      ))}
+                    </div>
+                  )}
                   {s.cta && (
                     <button className="btn btn-ghost btn-arrow" style={{ marginTop: 32 }} onClick={() => onGo(s.cta)}>
                       {t('svc.seeMore')}

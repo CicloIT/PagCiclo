@@ -4,6 +4,7 @@ import { useTranslation } from '../context/TranslationContext'
 
 export default function Contacto({ onGo }) {
   const [sent, setSent] = useState(false)
+  const [consent, setConsent] = useState(false)
   const { t } = useTranslation()
   const [topic, setTopic] = useState(t('contacto.topic.soporte'))
 
@@ -101,6 +102,20 @@ export default function Contacto({ onGo }) {
                     <textarea id="c-msj" className="textarea" required placeholder={t('contacto.form.mensajePh')} />
                   </div>
 
+                  <label className="consent-row">
+                    <input
+                      type="checkbox"
+                      required
+                      checked={consent}
+                      onChange={(e) => setConsent(e.target.checked)}
+                    />
+                    <span>
+                      {t('contacto.form.consent')}{' '}
+                      <a href="/privacidad" target="_blank" rel="noopener">{t('contacto.form.consentLink')}</a>{' '}
+                      {t('contacto.form.consentRest')}
+                    </span>
+                  </label>
+
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
                     <div className="mono" style={{ fontSize: 11, color: 'var(--text-faint)' }}>{t('contacto.form.respuesta')}</div>
                     <button type="submit" className="btn btn-primary btn-arrow">{t('contacto.form.enviar')}</button>
@@ -144,6 +159,10 @@ export default function Contacto({ onGo }) {
           .topic:hover{ border-color: var(--text-muted); color: var(--text); }
           .topic.is-on{ background: var(--primary); border-color: var(--primary); color: #fff; }
           .dir-sharp .topic.is-on{ color: #0a0d0d; }
+          .consent-row{ display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: var(--text-muted); line-height: 1.5; cursor: pointer; }
+          .consent-row input{ margin-top: 3px; flex-shrink: 0; }
+          .consent-row a{ color: var(--text); text-decoration: underline; }
+          .consent-row a:hover{ color: var(--primary); }
           .sent{ background: var(--bg-elevated); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 48px; text-align: center; }
           .sent-icon{ display: inline-flex; padding: 12px; border-radius: 999px; background: var(--primary-soft); }
           @media (max-width: 980px){ .contact-grid{ grid-template-columns: 1fr; gap: 48px; } .contact-form-wrap{ position: static; } }

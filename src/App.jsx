@@ -12,11 +12,15 @@ import Nosotros from './pages/Nosotros'
 import Cursos from './pages/Cursos'
 import Contacto from './pages/Contacto'
 import Jabali from './pages/Jabali'
+import Lagunita from './pages/Lagunita'
+import Privacidad from './pages/Privacidad'
+import Terminos from './pages/Terminos'
 
 function AppInner() {
   const navigate = useNavigate()
   const location = useLocation()
   const isJabali = location.pathname === '/jabali'
+  const isLagunita = location.pathname === '/ccc'
   const [direction, setDirection] = useState('sharp')
 
   const go = (id) => {
@@ -34,7 +38,7 @@ function AppInner() {
 
   return (
     <div className="app">
-      {!isJabali && <Nav onGo={go} />}
+      {!isJabali && !isLagunita && <Nav onGo={go} />}
       <Routes>
         <Route path="/" element={<Home onGo={go} />} />
         <Route path="/servicios" element={<Servicios onGo={go} />} />
@@ -45,9 +49,12 @@ function AppInner() {
         <Route path="/cursos" element={<Cursos onGo={go} />} />
         <Route path="/contacto" element={<Contacto onGo={go} />} />
         <Route path="/jabali" element={<Jabali />} />
+        <Route path="/ccc" element={<Lagunita />} />
+        <Route path="/privacidad" element={<Privacidad />} />
+        <Route path="/terminos" element={<Terminos />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-      {!isJabali && <Footer onGo={go} />}
+      {!isJabali && !isLagunita && <Footer onGo={go} />}
 
       <div className="dir-toggle">
         <button
