@@ -25,7 +25,6 @@ export default function Servicios({ onGo }) {
     {
       id: 'games', n: '03', title: t('svc.games.title'),
       img: '/juegos.webp',
-      imgStyle: { aspectRatio: '16/9' },
       short: t('svc.games.short'),
       body: t('svc.games.body'),
       bullets: [t('svc.games.b1'), t('svc.games.b2'), t('svc.games.b3'), t('svc.games.b4')],
@@ -42,7 +41,6 @@ export default function Servicios({ onGo }) {
     {
       id: 'software', n: '04', title: t('svc.software.title'),
       img: '/Ordenes.webp',
-      imgStyle: { aspectRatio: '16/9' },
       short: t('svc.software.short'),
       body: t('svc.software.body'),
       bullets: [t('svc.software.b1'), t('svc.software.b2'), t('svc.software.b3'), t('svc.software.b4')],
@@ -51,7 +49,6 @@ export default function Servicios({ onGo }) {
     {
       id: 'ciber', n: '05', title: t('svc.ciber.title'),
       img: '/ciberseguridad.webp',
-      imgStyle: { aspectRatio: '16/9' },
       short: t('svc.ciber.short'),
       body: t('svc.ciber.body'),
       bullets: [t('svc.ciber.b1'), t('svc.ciber.b2'), t('svc.ciber.b3'), t('svc.ciber.b4')],
@@ -60,7 +57,6 @@ export default function Servicios({ onGo }) {
     {
       id: 'lcg', n: '06', title: t('svc.lcg.title'),
       img: '/lcgestion.webp',
-      imgStyle: { aspectRatio: '16/9' },
       short: t('svc.lcg.short'),
       body: t('svc.lcg.body'),
       bullets: [t('svc.lcg.b1'), t('svc.lcg.b2'), t('svc.lcg.b3'), t('svc.lcg.b4')],
@@ -69,7 +65,7 @@ export default function Servicios({ onGo }) {
     {
       id: 'starlink', n: '07', title: t('svc.starlink.title'),
       img: '/StarLink800x1067.png',
-      imgStyle: { aspectRatio: '4/3' },
+      imgPos: 'bottom',
       short: t('svc.starlink.short'),
       body: t('svc.starlink.body'),
       bullets: [t('svc.starlink.b1'), t('svc.starlink.b2'), t('svc.starlink.b3'), t('svc.starlink.b4')],
@@ -141,54 +137,58 @@ export default function Servicios({ onGo }) {
       </section>
 
       {/* SERVICE BLOCKS */}
-      {SERVICIOS.map((s, i) => (
-        <section key={s.id} id={s.id} className="section">
-          <div className="container">
-            <div className="srv-block">
-              <div className="srv-block-side">
-                <div className="mono" style={{ fontSize: 11, color: 'var(--text-faint)', letterSpacing: '0.08em' }}>{s.n} / 08</div>
-                <div className="srv-block-rule" />
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
-                  {s.tags.map(tg => <span key={tg} className="tag">{tg}</span>)}
-                </div>
-              </div>
-              <div className="srv-block-main">
-                <Reveal>
-                  <h2 className="h-1">{s.title}</h2>
-                  <p className="lede" style={{ marginTop: 18 }}>{s.short}</p>
-                  <p className="muted" style={{ marginTop: 14, fontSize: 15, maxWidth: '62ch' }}>{s.body}</p>
-                  <ul className="srv-bullets">
-                    {s.bullets.map(b => <li key={b}><Tick />{b}</li>)}
-                  </ul>
-                  {s.links && (
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginTop: 20 }}>
-                      {s.links.map(l => (
-                        <a key={l.url} href={l.url} target="_blank" rel="noopener" className="tag">{l.label}</a>
-                      ))}
+      <section className="section">
+        <div className="container">
+          <div className="srv-cards">
+            {SERVICIOS.map((s, i) => (
+              <Reveal key={s.id} delay={(i % 2) * 60}>
+                <article id={s.id} className="srv-card-full">
+                  <div className="srv-card-full-visual img-wrap">
+                    <img src={s.img} alt={s.title} className="img-cover" style={s.imgPos ? { objectPosition: s.imgPos } : undefined} />
+                  </div>
+                  <div className="srv-card-full-body">
+                    <div className="srv-card-full-head">
+                      <span className="mono" style={{ fontSize: 11, color: 'var(--text-faint)', letterSpacing: '0.08em' }}>{s.n} / 08</span>
+                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+                        {s.tags.map(tg => <span key={tg} className="tag">{tg}</span>)}
+                      </div>
                     </div>
-                  )}
-                  {s.cta && (
-                    <button className="btn btn-ghost btn-arrow" style={{ marginTop: 32 }} onClick={() => onGo(s.cta)}>
-                      {t('svc.seeMore')}
-                    </button>
-                  )}
-                </Reveal>
-              </div>
-              <div className="srv-block-visual img-wrap">
-                <img src={s.img} alt={s.title} className="img-cover" style={{ aspectRatio: '4/5', ...s.imgStyle }} />
-              </div>
-            </div>
+                    <h2 className="h-2" style={{ marginTop: 16 }}>{s.title}</h2>
+                    <p className="muted" style={{ marginTop: 10, fontSize: 14.5 }}>{s.short}</p>
+                    <p className="muted" style={{ marginTop: 10, fontSize: 13.5, opacity: 0.85 }}>{s.body}</p>
+                    <ul className="srv-bullets">
+                      {s.bullets.map(b => <li key={b}><Tick />{b}</li>)}
+                    </ul>
+                    {s.links && (
+                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: 18 }}>
+                        {s.links.map(l => (
+                          <a key={l.url} href={l.url} target="_blank" rel="noopener" className="tag">{l.label}</a>
+                        ))}
+                      </div>
+                    )}
+                    {s.cta && (
+                      <button className="btn btn-ghost btn-arrow" style={{ marginTop: 24 }} onClick={() => onGo(s.cta)}>
+                        {t('svc.seeMore')}
+                      </button>
+                    )}
+                  </div>
+                </article>
+              </Reveal>
+            ))}
           </div>
-          <style>{`
-            .srv-block{ display: grid; grid-template-columns: 180px 1fr 320px; gap: 56px; padding-top: 48px; border-top: 1px solid var(--border); }
-            .srv-block-side{ display: flex; flex-direction: column; gap: 16px; }
-            .srv-block-rule{ width: 32px; height: 2px; background: var(--primary); margin: 4px 0 8px; }
-            .srv-bullets{ list-style: none; padding: 0; margin: 28px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 32px; font-size: 14.5px; }
-            .srv-bullets li{ display: flex; align-items: center; gap: 10px; color: var(--text-muted); }
-            @media (max-width: 1000px){ .srv-block{ grid-template-columns: 1fr; gap: 24px; } .srv-block-visual{ order: -1; max-width: 480px; } .srv-bullets{ grid-template-columns: 1fr; } }
-          `}</style>
-        </section>
-      ))}
+        </div>
+        <style>{`
+          .srv-cards{ display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+          .srv-card-full{ display: flex; flex-direction: column; border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; background: var(--bg-elevated); height: 100%; scroll-margin-top: 90px; }
+          .srv-card-full-visual{ border: 0; border-radius: 0; aspect-ratio: 16/9; }
+          .srv-card-full-visual .img-cover{ object-position: top; }
+          .srv-card-full-body{ padding: 28px; display: flex; flex-direction: column; flex: 1; }
+          .srv-card-full-head{ display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+          .srv-bullets{ list-style: none; padding: 0; margin: 20px 0 0; display: flex; flex-direction: column; gap: 10px; font-size: 14px; }
+          .srv-bullets li{ display: flex; align-items: center; gap: 10px; color: var(--text-muted); }
+          @media (max-width: 900px){ .srv-cards{ grid-template-columns: 1fr; } }
+        `}</style>
+      </section>
 
       {/* CTA */}
       <section className="section">
