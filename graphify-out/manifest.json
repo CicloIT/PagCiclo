@@ -120,8 +120,8 @@
     "semantic_hash": ""
   },
   "src/pages/Home.jsx": {
-    "mtime": 1790344229.041371,
-    "ast_hash": "674b81e0c6ab9ae6cbf30088f6da185d",
+    "mtime": 1790345618.5047562,
+    "ast_hash": "2ebb3c207a9b5f2b1951ee318af679d6",
     "semantic_hash": ""
   },
   "src/pages/Jabali.jsx": {
@@ -592,6 +592,11 @@
   "src/components/ThemeToggle.jsx": {
     "mtime": 1790339647.1510477,
     "ast_hash": "df62571ff0089bff6ba5c4f3dc132cbf",
+    "semantic_hash": ""
+  },
+  "Imagenes/InicioStarlink.webp": {
+    "mtime": 1790345459.4158642,
+    "ast_hash": "5458a7e9f533a78c46ca0ee550e75de5",
     "semantic_hash": ""
   }
 }

@@ -224,7 +224,7 @@ export default function Home({ onGo }) {
 
             <Reveal delay={120}>
               <div className="sf-visual">
-                <img src="/StarLink800x1067.png" alt="Instalación de antena Starlink" className="img-cover" style={{ aspectRatio: '4/5' }} />
+                <img src="/InicioStarlink.webp" alt="Instalación de antena Starlink" className="img-cover" style={{ aspectRatio: '4/5', objectPosition: 'right center' }} />
                 <div className="sf-coord mono">
                   <span>33°08′S</span><span>·</span><span>64°20′W</span>
                   <span style={{ marginLeft: 'auto', color: 'var(--primary)' }}>● ONLINE</span>
