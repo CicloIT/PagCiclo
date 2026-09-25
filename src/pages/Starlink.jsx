@@ -1,8 +1,9 @@
 import { Fragment } from 'react'
 import { Reveal, Eyebrow, Tick } from '../components/ui'
 import { useTranslation } from '../context/TranslationContext'
+import { waLink } from '../lib/whatsapp'
 
-export default function Starlink({ onGo }) {
+export default function Starlink() {
   const { t } = useTranslation()
 
   const models = [
@@ -209,7 +210,7 @@ export default function Starlink({ onGo }) {
             </div>
             <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
               <a className="btn btn-primary btn-arrow" href="https://wa.me/5493584314857" target="_blank" rel="noopener">{t('starlink.cta.btn1')}</a>
-              <button className="btn btn-ghost" onClick={() => onGo('contacto')}>{t('starlink.cta.btn2')}</button>
+              <a className="btn btn-ghost" href={waLink(t('starlink.wa.otra'))} target="_blank" rel="noopener">{t('starlink.cta.btn2')}</a>
             </div>
           </div>
         </div>

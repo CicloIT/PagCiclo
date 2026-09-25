@@ -102,7 +102,9 @@
 
   "home.cta.title": "Let's talk about your next cycle?",
   "home.cta.lede": "Tell us what you need to solve. We'll send back a clear plan in under 48 hours.",
+  "home.cta.visit": "Or visit us at Arturo M. Bas 1227, Río Cuarto, Córdoba.",
   "home.cta.btn1": "Write a message",
+  "home.wa.consulta": "Hi! I have a question about CicloIT's services",
   "home.cta.btn2": "Direct WhatsApp",
 
   "svc.page.eyebrow": "Services · 2026",
@@ -112,6 +114,7 @@
   "svc.cta.eyebrow": "Let's start",
   "svc.cta.title": "Which of these services do you need to tackle first?",
   "svc.cta.btn1": "Let's talk",
+  "svc.wa.consulta": "Hi! I'd like to ask about one of your services",
   "svc.cta.btn2": "View plans",
 
   "svc.soporte.title": "Support & Maintenance",
@@ -185,6 +188,8 @@
   "planes.sla": "SLA",
   "planes.pricing": "Quoted to fit your devices and users.",
   "planes.contratar": "Get",
+  "planes.wa.contratar": "Hi! I'd like to get the plan",
+  "planes.wa.cotizacion": "Hi! I'd like a quote for an IT support plan",
 
   "planes.start.tier": "Tier 1",
   "planes.start.tag": "The essentials",
@@ -335,6 +340,7 @@
   "starlink.cta.lede": "Send us the location and we'll tell you what can be done.",
   "starlink.cta.btn1": "Request installation",
   "starlink.cta.btn2": "Other inquiry",
+  "starlink.wa.otra": "Hi! I have a question about Starlink",
 
   "contacto.eyebrow": "Contact · Río Cuarto, AR",
   "contacto.title": "Let's talk.",
@@ -418,6 +424,8 @@
   "lorawan.cta.title": "Got something you want to measure in real time?",
   "lorawan.cta.lede": "We help you design the network and sensors you need.",
   "lorawan.cta.btn1": "Let's talk",
+  "lorawan.wa.cotizar": "Hi! I'd like a quote for a LoRaWAN project",
+  "lorawan.wa.medir": "Hi! I'd like to measure something in real time with LoRaWAN",
   "lorawan.cta.btn2": "WhatsApp",
 
   "nosotros.eyebrow": "About us · Río Cuarto, AR",
@@ -475,6 +483,7 @@
   "nosotros.cta.title": "Let's talk about a project together?",
   "nosotros.cta.lede": "We'll respond in under 48 hours.",
   "nosotros.cta.btn1": "Get in touch",
+  "nosotros.wa.proyecto": "Hi! I'd like to talk about a project with CicloIT",
   "nosotros.cta.btn2": "WhatsApp",
 
   "cursos.eyebrow": "Courses · 2026",
@@ -537,6 +546,9 @@
   "cursos.cta.title": "Want to train your team?",
   "cursos.cta.lede": "We'll put together a program that fits their level and availability.",
   "cursos.cta.btn1": "Inquire",
+  "cursos.wa.inicios": "Hi! I'd like to know about upcoming course sessions",
+  "cursos.wa.inscribir": "Hi! I'd like to enroll my team in the course",
+  "cursos.wa.capacitar": "Hi! I'd like to train my team",
   "cursos.cta.btn2": "WhatsApp",
 
   "footer.legal": "Legal",

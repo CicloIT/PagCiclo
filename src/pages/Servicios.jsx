@@ -1,5 +1,6 @@
 import { Reveal, Eyebrow, Tick, Arrow } from '../components/ui'
 import { useTranslation } from '../context/TranslationContext'
+import { waLink } from '../lib/whatsapp'
 
 export default function Servicios({ onGo }) {
   const { t } = useTranslation()
@@ -208,7 +209,7 @@ export default function Servicios({ onGo }) {
               <h2 className="h-1" style={{ marginTop: 12, maxWidth: '22ch' }}>{t('svc.cta.title')}</h2>
             </div>
             <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-              <button className="btn btn-primary btn-arrow" onClick={() => onGo('contacto')}>{t('svc.cta.btn1')}</button>
+              <a className="btn btn-primary btn-arrow" href={waLink(t('svc.wa.consulta'))} target="_blank" rel="noopener">{t('svc.cta.btn1')}</a>
               <button className="btn btn-ghost" onClick={() => onGo('planes')}>{t('svc.cta.btn2')}</button>
             </div>
           </div>

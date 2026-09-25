@@ -1,7 +1,8 @@
 import { Reveal, Eyebrow } from '../components/ui'
 import { useTranslation } from '../context/TranslationContext'
+import { waLink } from '../lib/whatsapp'
 
-export default function Cursos({ onGo }) {
+export default function Cursos() {
   const { t } = useTranslation()
 
   const CURSOS = [
@@ -41,7 +42,7 @@ export default function Cursos({ onGo }) {
             {t('cursos.lede')}
           </p>
           <div style={{ display: 'flex', gap: 12, marginTop: 28, flexWrap: 'wrap' }}>
-            <button className="btn btn-primary btn-arrow" onClick={() => onGo('contacto')}>{t('cursos.cta1')}</button>
+            <a className="btn btn-primary btn-arrow" href={waLink(t('cursos.wa.inicios'))} target="_blank" rel="noopener">{t('cursos.cta1')}</a>
             <a className="btn btn-ghost" href="https://wa.me/5493584314857" target="_blank" rel="noopener">{t('cursos.cta2')}</a>
           </div>
         </div>
@@ -67,7 +68,7 @@ export default function Cursos({ onGo }) {
                     <div><span className="mono curso-k">{t('cursos.cupo')}</span> <span>{c.cupo}</span></div>
                   </div>
                   <div>
-                    <button className="btn btn-ghost btn-arrow" onClick={() => onGo('contacto')}>{t('cursos.inscribir')}</button>
+                    <a className="btn btn-ghost btn-arrow" href={waLink(`${t('cursos.wa.inscribir')} ${c.title}`)} target="_blank" rel="noopener">{t('cursos.inscribir')}</a>
                   </div>
                 </article>
               </Reveal>
@@ -109,7 +110,7 @@ export default function Cursos({ onGo }) {
               <p className="lede" style={{ marginTop: 16 }}>{t('cursos.cta.lede')}</p>
             </div>
             <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-              <button className="btn btn-primary btn-arrow" onClick={() => onGo('contacto')}>{t('cursos.cta.btn1')}</button>
+              <a className="btn btn-primary btn-arrow" href={waLink(t('cursos.wa.capacitar'))} target="_blank" rel="noopener">{t('cursos.cta.btn1')}</a>
               <a className="btn btn-ghost" href="https://wa.me/5493584314857" target="_blank" rel="noopener">{t('cursos.cta.btn2')}</a>
             </div>
           </div>

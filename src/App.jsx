@@ -38,7 +38,7 @@ function AppInner() {
 
   return (
     <div className="app">
-      {!isJabali && !isLagunita && <Nav onGo={go} />}
+      {!isJabali && !isLagunita && <Nav onGo={go} direction={direction} onDirection={setDirection} />}
       <Routes>
         <Route path="/" element={<Home onGo={go} />} />
         <Route path="/servicios" element={<Servicios onGo={go} />} />
@@ -55,39 +55,6 @@ function AppInner() {
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       {!isJabali && !isLagunita && <Footer onGo={go} />}
-
-      <div className="dir-toggle">
-        <button
-          className={`dir-btn ${direction === 'soft' ? 'is-on' : ''}`}
-          onClick={() => setDirection('soft')}
-        >
-          ☀ Soft
-        </button>
-        <button
-          className={`dir-btn ${direction === 'sharp' ? 'is-on' : ''}`}
-          onClick={() => setDirection('sharp')}
-        >
-          ◈ Sharp
-        </button>
-      </div>
-
-      <style>{`
-        .dir-toggle{
-          position: fixed; bottom: 20px; left: 20px; z-index: 200;
-          display: flex; gap: 4px; padding: 4px;
-          background: var(--bg-elevated); border: 1px solid var(--border-strong);
-          border-radius: var(--radius-md);
-          box-shadow: var(--shadow-md);
-        }
-        .dir-btn{
-          appearance: none; border: 0; background: transparent; color: var(--text-muted);
-          padding: 6px 12px; font-size: 11px; font-family: 'Geist Mono', monospace;
-          border-radius: calc(var(--radius-md) - 4px); transition: background-color .15s ease, color .15s ease;
-        }
-        .dir-btn:hover{ color: var(--text); background: var(--bg-tint); }
-        .dir-btn.is-on{ background: var(--primary); color: #fff; }
-        .dir-sharp .dir-btn.is-on{ color: #0a0d0d; }
-      `}</style>
     </div>
   )
 }

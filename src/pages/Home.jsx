@@ -1,5 +1,6 @@
 import { Reveal, Eyebrow, Stat, Tick, Arrow } from '../components/ui'
 import { useTranslation } from '../context/TranslationContext'
+import { waLink } from '../lib/whatsapp'
 
 const JSON_LD = {
   '@context': 'https://schema.org',
@@ -353,9 +354,12 @@ export default function Home({ onGo }) {
             <div>
               <h2 className="h-1" style={{ maxWidth: '20ch' }}>{t('home.cta.title')}</h2>
               <p className="lede" style={{ marginTop: 16 }}>{t('home.cta.lede')}</p>
+              <p className="lede" style={{ marginTop: 12 }}>
+                <a style={{ color: 'inherit', font: 'inherit', textDecoration: 'underline', textUnderlineOffset: 3 }} href="https://www.google.com/maps/search/?api=1&query=Arturo+M.+Bas+1227,+R%C3%ADo+Cuarto,+C%C3%B3rdoba" target="_blank" rel="noopener">{t('home.cta.visit')}</a>
+              </p>
             </div>
             <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-              <button className="btn btn-primary btn-arrow" onClick={() => onGo('contacto')}>{t('home.cta.btn1')}</button>
+              <a className="btn btn-primary btn-arrow" href={waLink(t('home.wa.consulta'))} target="_blank" rel="noopener">{t('home.cta.btn1')}</a>
               <a className="btn btn-ghost" href="https://wa.me/5493584314857" target="_blank" rel="noopener">{t('home.cta.btn2')}</a>
             </div>
           </div>

@@ -1,0 +1,597 @@
+{
+  "package.json": {
+    "mtime": 1780429418.7841065,
+    "ast_hash": "effc18e205a838126b24abe49703c3a6",
+    "semantic_hash": ""
+  },
+  "src/App.jsx": {
+    "mtime": 1790339663.2610073,
+    "ast_hash": "dbecc13c344052513c9f48e80ccd71cb",
+    "semantic_hash": ""
+  },
+  "src/components/Footer.jsx": {
+    "mtime": 1789391017.410252,
+    "ast_hash": "2bdc287e4105d40f3ec97aa62c49aff5",
+    "semantic_hash": ""
+  },
+  "src/components/LanguageSwitcher.jsx": {
+    "mtime": 1781028593.953531,
+    "ast_hash": "ec3171a197724d1a9a7013103b140181",
+    "semantic_hash": ""
+  },
+  "src/components/Nav.jsx": {
+    "mtime": 1790339663.2610073,
+    "ast_hash": "9e5f9b4f1776d2aff390193c12b5e2fc",
+    "semantic_hash": ""
+  },
+  "src/components/jabali/FeatureCard.jsx": {
+    "mtime": 1780429505.790915,
+    "ast_hash": "161b75d9f5f07d7245c892105745a4d7",
+    "semantic_hash": ""
+  },
+  "src/components/jabali/ImpactSection.jsx": {
+    "mtime": 1780429601.121064,
+    "ast_hash": "fd949b552e192cd64fd2428a1105a0c8",
+    "semantic_hash": ""
+  },
+  "src/components/jabali/JabaliNav.jsx": {
+    "mtime": 1780429537.6310878,
+    "ast_hash": "da8167068fe6003c3e5ee31a7faac951",
+    "semantic_hash": ""
+  },
+  "src/components/jabali/LanguageSwitcher.jsx": {
+    "mtime": 1780429509.8103993,
+    "ast_hash": "8f242c35506225f7d9421edfaf5e77b0",
+    "semantic_hash": ""
+  },
+  "src/components/jabali/ProjectSection.jsx": {
+    "mtime": 1780429555.6633005,
+    "ast_hash": "696305c0b8c136621e9c08027ae03c90",
+    "semantic_hash": ""
+  },
+  "src/components/jabali/ResourcesSection.jsx": {
+    "mtime": 1780429621.540086,
+    "ast_hash": "39bdd07a1075be3237733de1c0cbf8e5",
+    "semantic_hash": ""
+  },
+  "src/components/jabali/TechnologySection.jsx": {
+    "mtime": 1780928479.5699596,
+    "ast_hash": "af8a12f8c85277a670b450a46f20d000",
+    "semantic_hash": ""
+  },
+  "src/components/jabali/VideoCard.jsx": {
+    "mtime": 1780429516.2242234,
+    "ast_hash": "6fea8bd272de65ae7e4afad3da093054",
+    "semantic_hash": ""
+  },
+  "src/components/ui.jsx": {
+    "mtime": 1778678126.2112434,
+    "ast_hash": "2153dc582358ef8b622e07028cf272e5",
+    "semantic_hash": ""
+  },
+  "src/context/TranslationContext.jsx": {
+    "mtime": 1781787472.596278,
+    "ast_hash": "8be099b137cd022853ef113cab03c57b",
+    "semantic_hash": ""
+  },
+  "src/locales/en.json": {
+    "mtime": 1790344117.3618302,
+    "ast_hash": "86022a09be2fa4c548d7536ff4c315d6",
+    "semantic_hash": ""
+  },
+  "src/locales/es.json": {
+    "mtime": 1790344117.2993827,
+    "ast_hash": "821ee097a134bfa3a4f6c3735a7f3e53",
+    "semantic_hash": ""
+  },
+  "src/locales/jabali_en.json": {
+    "mtime": 1773065483.83015,
+    "ast_hash": "9906e8cdf2a6f72738c39a5be911db1f",
+    "semantic_hash": ""
+  },
+  "src/locales/jabali_es.json": {
+    "mtime": 1773065503.2482038,
+    "ast_hash": "1876395fe9b8e2723c3c70f48754e831",
+    "semantic_hash": ""
+  },
+  "src/locales/lagunita_en.json": {
+    "mtime": 1782155738.3545525,
+    "ast_hash": "f4bd02bdd68a215f1df2407ce389c672",
+    "semantic_hash": ""
+  },
+  "src/locales/lagunita_es.json": {
+    "mtime": 1782155735.29864,
+    "ast_hash": "6e063a81e218e8efbbd5dcd47b2a4e27",
+    "semantic_hash": ""
+  },
+  "src/main.jsx": {
+    "mtime": 1778678065.9222603,
+    "ast_hash": "e13723e2574429d9a6d849727e3ff695",
+    "semantic_hash": ""
+  },
+  "src/pages/Contacto.jsx": {
+    "mtime": 1789391032.5172017,
+    "ast_hash": "655a1faf82bac69056cddfeec89be3aa",
+    "semantic_hash": ""
+  },
+  "src/pages/Cursos.jsx": {
+    "mtime": 1790339026.8535063,
+    "ast_hash": "021fbf6afca7b68daaa0d0d4eeb4d310",
+    "semantic_hash": ""
+  },
+  "src/pages/Home.jsx": {
+    "mtime": 1790344229.041371,
+    "ast_hash": "674b81e0c6ab9ae6cbf30088f6da185d",
+    "semantic_hash": ""
+  },
+  "src/pages/Jabali.jsx": {
+    "mtime": 1781029585.3475385,
+    "ast_hash": "61fc01dd9269742b9323580e134716fa",
+    "semantic_hash": ""
+  },
+  "src/pages/Lagunita.jsx": {
+    "mtime": 1782155762.181314,
+    "ast_hash": "af80f3ea3a4ad42c63b755dad043bb0a",
+    "semantic_hash": ""
+  },
+  "src/pages/LoRaWAN.jsx": {
+    "mtime": 1790339011.9544387,
+    "ast_hash": "3053d871f7f3c6b674406bf8488ca197",
+    "semantic_hash": ""
+  },
+  "src/pages/Nosotros.jsx": {
+    "mtime": 1790339026.8689969,
+    "ast_hash": "1a0fe3e35bc993af7b9cc92f53a9eb30",
+    "semantic_hash": ""
+  },
+  "src/pages/Planes.jsx": {
+    "mtime": 1790339011.9523506,
+    "ast_hash": "fd58b57a5173fd077a1cac4748c537f3",
+    "semantic_hash": ""
+  },
+  "src/pages/Privacidad.jsx": {
+    "mtime": 1789390994.7127366,
+    "ast_hash": "f4895af0be3e74e79771bf3abe218d48",
+    "semantic_hash": ""
+  },
+  "src/pages/Servicios.jsx": {
+    "mtime": 1790339011.9544387,
+    "ast_hash": "36c498579dd98e768cbc069b9e1ad103",
+    "semantic_hash": ""
+  },
+  "src/pages/Starlink.jsx": {
+    "mtime": 1790339026.884738,
+    "ast_hash": "bf697570135b8a5ea7bc68d36ca26921",
+    "semantic_hash": ""
+  },
+  "src/pages/Terminos.jsx": {
+    "mtime": 1789391000.6926928,
+    "ast_hash": "f066e21bb38e6d03adc39f1c16b82384",
+    "semantic_hash": ""
+  },
+  "vite.config.js": {
+    "mtime": 1778678060.1886318,
+    "ast_hash": "6da2722659549b6f1aad0b95405ac7f7",
+    "semantic_hash": ""
+  },
+  "Imagenes/llms.txt": {
+    "mtime": 1780428471.7237601,
+    "ast_hash": "a5064e7f52b067d15e6d425de82683d4",
+    "semantic_hash": ""
+  },
+  "Imagenes/robots.txt": {
+    "mtime": 1780428478.958075,
+    "ast_hash": "5fdc5577aa5f53d61cb6930167dc3041",
+    "semantic_hash": ""
+  },
+  "index.html": {
+    "mtime": 1780428500.4936342,
+    "ast_hash": "d42ea5865e10adb81e820b0c931a467b",
+    "semantic_hash": ""
+  },
+  "lagunita.md": {
+    "mtime": 1782155572.1907306,
+    "ast_hash": "11afb601e01b2933478368b8ea16f874",
+    "semantic_hash": ""
+  },
+  "Imagenes/Camara.webp": {
+    "mtime": 1754680373.3094642,
+    "ast_hash": "956e760c23553bc06fd73ecfde89e737",
+    "semantic_hash": ""
+  },
+  "Imagenes/Fondo.webp": {
+    "mtime": 1758031950.9661946,
+    "ast_hash": "c3e3ab27c035caac6fbf54c63150675a",
+    "semantic_hash": ""
+  },
+  "Imagenes/Gat.jpeg": {
+    "mtime": 1754680373.3590238,
+    "ast_hash": "74ea2a34b82635bc95b12ddb8086268b",
+    "semantic_hash": ""
+  },
+  "Imagenes/Individual.webp": {
+    "mtime": 1758026343.2564528,
+    "ast_hash": "a8b2934d45b31853741c9b8afe153ba9",
+    "semantic_hash": ""
+  },
+  "Imagenes/Infraja.jpeg": {
+    "mtime": 1754680373.4586644,
+    "ast_hash": "d9e56d365ac586e411d87df84a901d84",
+    "semantic_hash": ""
+  },
+  "Imagenes/LcGestions.webp": {
+    "mtime": 1756216947.308574,
+    "ast_hash": "a02cd52c33606d0b1d9a5f13bce397f2",
+    "semantic_hash": ""
+  },
+  "Imagenes/Moda.webp": {
+    "mtime": 1754680373.6246388,
+    "ast_hash": "4f3ee28c840cddef88916f63d8b60668",
+    "semantic_hash": ""
+  },
+  "Imagenes/Ordenes.webp": {
+    "mtime": 1754680373.6561496,
+    "ast_hash": "6e1feed30ff01b1144f7ec98b73f0316",
+    "semantic_hash": ""
+  },
+  "Imagenes/PageLidercom.webp": {
+    "mtime": 1754680373.7115932,
+    "ast_hash": "90ade30c7445fad7e3dc01180784fdf4",
+    "semantic_hash": ""
+  },
+  "Imagenes/Precios.webp": {
+    "mtime": 1758030239.8594477,
+    "ast_hash": "cde2b9b1b953763c35db5b582afb5c17",
+    "semantic_hash": ""
+  },
+  "Imagenes/Precios2.webp": {
+    "mtime": 1770908275.9822717,
+    "ast_hash": "7483d835de856047e346eac3e1f67629",
+    "semantic_hash": ""
+  },
+  "Imagenes/Privada.webp": {
+    "mtime": 1758026361.690389,
+    "ast_hash": "3873b3bdb452d5de9c6c18c38745782b",
+    "semantic_hash": ""
+  },
+  "Imagenes/Reuniones.webp": {
+    "mtime": 1758026351.446312,
+    "ast_hash": "6fe703ce598e2807af2a3faa6e640763",
+    "semantic_hash": ""
+  },
+  "Imagenes/SalaReunion1.webp": {
+    "mtime": 1770907980.3956592,
+    "ast_hash": "31dce8484033875a42a049a9662eaad1",
+    "semantic_hash": ""
+  },
+  "Imagenes/SalaReunion2.webp": {
+    "mtime": 1770907992.7662654,
+    "ast_hash": "7476bcbbbe87683b30155d5665b8cf99",
+    "semantic_hash": ""
+  },
+  "Imagenes/SalaReunion3.webp": {
+    "mtime": 1770908004.2545333,
+    "ast_hash": "cb31a93d9e9a86ca0c3645bb88cdea00",
+    "semantic_hash": ""
+  },
+  "Imagenes/Sensor.jpeg": {
+    "mtime": 1754680373.7885647,
+    "ast_hash": "26c4141d93378c2ccd70471146f8bbab",
+    "semantic_hash": ""
+  },
+  "Imagenes/Sensor4.jpeg": {
+    "mtime": 1789587956.4654734,
+    "ast_hash": "dcc89922203184fc1b309eacf61f807d",
+    "semantic_hash": ""
+  },
+  "Imagenes/Sensor6.jpeg": {
+    "mtime": 1754680373.827891,
+    "ast_hash": "115751ab5dc410d9bb5d1b119dbb9f0a",
+    "semantic_hash": ""
+  },
+  "Imagenes/StarLink1.jpg": {
+    "mtime": 1754680373.8690627,
+    "ast_hash": "33dc3b61075cdd19eed63627a02212d6",
+    "semantic_hash": ""
+  },
+  "Imagenes/StarLink800x1067.png": {
+    "mtime": 1789587986.7908497,
+    "ast_hash": "05a9e5bbb9e1fa0f958487bd76c38888",
+    "semantic_hash": ""
+  },
+  "Imagenes/StarLink800x600.png": {
+    "mtime": 1780928267.5718293,
+    "ast_hash": "e91d89403dfe84cfd41b5efa2fd6789f",
+    "semantic_hash": ""
+  },
+  "Imagenes/StarLink960x1200.png": {
+    "mtime": 1780928277.8950171,
+    "ast_hash": "5b45d2e8d8b3095882751e09f165bee1",
+    "semantic_hash": ""
+  },
+  "Imagenes/StarLinkStandar.jpg": {
+    "mtime": 1754680373.8878162,
+    "ast_hash": "ac042b0f25326b5af1a65430dc07d6e3",
+    "semantic_hash": ""
+  },
+  "Imagenes/StarLinkStandar.png": {
+    "mtime": 1780928099.229025,
+    "ast_hash": "f160773e93d6e61471d02341211738b2",
+    "semantic_hash": ""
+  },
+  "Imagenes/StarlinkMini.webp": {
+    "mtime": 1780928136.2034624,
+    "ast_hash": "801eb1f1d86d9816ed200541ed5ac283",
+    "semantic_hash": ""
+  },
+  "Imagenes/Turno.webp": {
+    "mtime": 1754680373.9292252,
+    "ast_hash": "051ef7ff3cec60b580f58ebcc16b7938",
+    "semantic_hash": ""
+  },
+  "Imagenes/accidente.jpeg": {
+    "mtime": 1754680373.259748,
+    "ast_hash": "f32c82eeece85d7839a320b98eabf5da",
+    "semantic_hash": ""
+  },
+  "Imagenes/android-chrome-192x192.png": {
+    "mtime": 1755027454.3272986,
+    "ast_hash": "bb6d62b9d0995c611c555da6b0d1fb7b",
+    "semantic_hash": ""
+  },
+  "Imagenes/android-chrome-512x512.png": {
+    "mtime": 1755027454.3433278,
+    "ast_hash": "7a9537ddd10ccf9fe066566b8d602b4b",
+    "semantic_hash": ""
+  },
+  "Imagenes/apple-touch-icon.png": {
+    "mtime": 1755027454.2163613,
+    "ast_hash": "5ae4df2de2fd60a84c76489cf45b46d2",
+    "semantic_hash": ""
+  },
+  "Imagenes/background.webp": {
+    "mtime": 1754680373.2858727,
+    "ast_hash": "c7eb266c71c3cc206ea9ea7f42f96a10",
+    "semantic_hash": ""
+  },
+  "Imagenes/ciberseguridad.webp": {
+    "mtime": 1754680373.3378568,
+    "ast_hash": "5d158c225fc5928869302b1e08289a8c",
+    "semantic_hash": ""
+  },
+  "Imagenes/favicon-16x16.png": {
+    "mtime": 1755027454.2599647,
+    "ast_hash": "a7a486c085209cd94294be7ad06862aa",
+    "semantic_hash": ""
+  },
+  "Imagenes/favicon-32x32.png": {
+    "mtime": 1755027454.2322047,
+    "ast_hash": "87518d392376f9706a22b1a11ad2098f",
+    "semantic_hash": ""
+  },
+  "Imagenes/file.svg": {
+    "mtime": 1754680968.3969326,
+    "ast_hash": "d09f95206c3fa0bb9bd9fefabfd0ea71",
+    "semantic_hash": ""
+  },
+  "Imagenes/globe.svg": {
+    "mtime": 1754680968.4127219,
+    "ast_hash": "2aaafa6a49b6563925fe440891e32717",
+    "semantic_hash": ""
+  },
+  "Imagenes/icono.webp": {
+    "mtime": 1754680373.3713837,
+    "ast_hash": "b5ababf2aabe7abba665e7e405c78e50",
+    "semantic_hash": ""
+  },
+  "Imagenes/info.jpeg": {
+    "mtime": 1754680373.407449,
+    "ast_hash": "84c9e1ce1cbabb5b29f69fe470dea1de",
+    "semantic_hash": ""
+  },
+  "Imagenes/info2.jpeg": {
+    "mtime": 1754680373.432872,
+    "ast_hash": "6c4bab63e427fe5b547e1ddcfce37dfd",
+    "semantic_hash": ""
+  },
+  "Imagenes/infra-jabali.jpeg": {
+    "mtime": 1754680373.5552168,
+    "ast_hash": "3645ea0a72ff4642918141eaebaea21f",
+    "semantic_hash": ""
+  },
+  "Imagenes/j.jpeg": {
+    "mtime": 1754680373.5063455,
+    "ast_hash": "5c365a2c8f771b1768ea357db26b24a0",
+    "semantic_hash": ""
+  },
+  "Imagenes/juegos.webp": {
+    "mtime": 1789583931.3717797,
+    "ast_hash": "a5564a3330b0fedef33cce5c427ae0cf",
+    "semantic_hash": ""
+  },
+  "Imagenes/lagunita/1.jpeg": {
+    "mtime": 1781787097.7820961,
+    "ast_hash": "86173335b8e2421da47a965f975a16ac",
+    "semantic_hash": ""
+  },
+  "Imagenes/lagunita/10.jpeg": {
+    "mtime": 1781787138.4390814,
+    "ast_hash": "3f02b3401e5942763f872073ed4725a2",
+    "semantic_hash": ""
+  },
+  "Imagenes/lagunita/11.jpeg": {
+    "mtime": 1781787147.1490805,
+    "ast_hash": "5ae2e26d8cf2375d1aba0a6b46e96da7",
+    "semantic_hash": ""
+  },
+  "Imagenes/lagunita/12.jpeg": {
+    "mtime": 1781787151.9150245,
+    "ast_hash": "d855d021588385b073c34d2051a957f0",
+    "semantic_hash": ""
+  },
+  "Imagenes/lagunita/13.jpeg": {
+    "mtime": 1781787155.1468642,
+    "ast_hash": "e833677e2ca0e6778a06ec7db6a5dcba",
+    "semantic_hash": ""
+  },
+  "Imagenes/lagunita/14.jpeg": {
+    "mtime": 1781787157.9397252,
+    "ast_hash": "89ef9a5a7213375bd2fb1caa9c9a512f",
+    "semantic_hash": ""
+  },
+  "Imagenes/lagunita/15.jpeg": {
+    "mtime": 1781787162.2115624,
+    "ast_hash": "ddcdf1e9211c38ab45daa2afb9ff3b2d",
+    "semantic_hash": ""
+  },
+  "Imagenes/lagunita/16.jpeg": {
+    "mtime": 1781787165.597354,
+    "ast_hash": "29066b54dd30962c7c3781008b9907ab",
+    "semantic_hash": ""
+  },
+  "Imagenes/lagunita/17.jpeg": {
+    "mtime": 1781787171.6259487,
+    "ast_hash": "2751392afcd13f22f6c66aa129ccafcf",
+    "semantic_hash": ""
+  },
+  "Imagenes/lagunita/18.jpeg": {
+    "mtime": 1781787175.2067351,
+    "ast_hash": "37a2d22ec8397b49eda4c8f9b9b05562",
+    "semantic_hash": ""
+  },
+  "Imagenes/lagunita/19.jpeg": {
+    "mtime": 1781787178.0072544,
+    "ast_hash": "9673eecc5cfa8398f920321e51e64a06",
+    "semantic_hash": ""
+  },
+  "Imagenes/lagunita/2.jpeg": {
+    "mtime": 1781787106.0427623,
+    "ast_hash": "d62c36cffa3142f719f1d63c80373257",
+    "semantic_hash": ""
+  },
+  "Imagenes/lagunita/3.jpeg": {
+    "mtime": 1781787110.7608101,
+    "ast_hash": "114d5dae27e4b1c07e0bc89211d3cb97",
+    "semantic_hash": ""
+  },
+  "Imagenes/lagunita/4.jpeg": {
+    "mtime": 1781787114.7917533,
+    "ast_hash": "839e39ea3732a745b50538ad1cb6d4ba",
+    "semantic_hash": ""
+  },
+  "Imagenes/lagunita/5.jpeg": {
+    "mtime": 1781787118.107118,
+    "ast_hash": "3c6eb401edb9c47e2a252c946b1099a9",
+    "semantic_hash": ""
+  },
+  "Imagenes/lagunita/6.jpeg": {
+    "mtime": 1781787122.5586565,
+    "ast_hash": "b44d94b8e027291b9b4e427c64e4f8af",
+    "semantic_hash": ""
+  },
+  "Imagenes/lagunita/7.jpeg": {
+    "mtime": 1781787126.5214245,
+    "ast_hash": "c7190d5b6ea7a1b402179521cf343a68",
+    "semantic_hash": ""
+  },
+  "Imagenes/lagunita/8.jpeg": {
+    "mtime": 1781787129.4206445,
+    "ast_hash": "7777b84ca0321bdaca85d0dc96255523",
+    "semantic_hash": ""
+  },
+  "Imagenes/lagunita/9.jpeg": {
+    "mtime": 1781787131.986521,
+    "ast_hash": "381a3f2134c65b341da884ba3242473f",
+    "semantic_hash": ""
+  },
+  "Imagenes/lcgestion.webp": {
+    "mtime": 1754680373.575656,
+    "ast_hash": "c7eb266c71c3cc206ea9ea7f42f96a10",
+    "semantic_hash": ""
+  },
+  "Imagenes/modern-coworking-space.webp": {
+    "mtime": 1756820036.6862764,
+    "ast_hash": "646086a4728f2d86234dd1cabd771986",
+    "semantic_hash": ""
+  },
+  "Imagenes/modern-individual-desk-workspace.webp": {
+    "mtime": 1756819460.4936557,
+    "ast_hash": "8c8abd2bcf5f158f19fa0a81232b851f",
+    "semantic_hash": ""
+  },
+  "Imagenes/modern-meeting-room-with-projector.webp": {
+    "mtime": 1756819460.5228121,
+    "ast_hash": "7e9e97d10909b24c4c4e1d09c9ac88e2",
+    "semantic_hash": ""
+  },
+  "Imagenes/next.svg": {
+    "mtime": 1754680968.4127219,
+    "ast_hash": "8e061864f388b47f33a1c3780831193e",
+    "semantic_hash": ""
+  },
+  "Imagenes/op.jpg": {
+    "mtime": 1755026246.865283,
+    "ast_hash": "8be60c351cc19f86efced4f2bf80d90a",
+    "semantic_hash": ""
+  },
+  "Imagenes/pag.webp": {
+    "mtime": 1754680373.6783724,
+    "ast_hash": "4c313eaf4ea102ef336afa0d261dda6c",
+    "semantic_hash": ""
+  },
+  "Imagenes/planes.webp": {
+    "mtime": 1754680373.7420726,
+    "ast_hash": "c142f62d77049e29bc6ea569e9eed0a0",
+    "semantic_hash": ""
+  },
+  "Imagenes/private-office-space-with-modern-furniture.webp": {
+    "mtime": 1756819462.0647018,
+    "ast_hash": "e31e0f9e39e2b964cc4a1b6671f6eebe",
+    "semantic_hash": ""
+  },
+  "Imagenes/seguridad.webp": {
+    "mtime": 1754680373.768213,
+    "ast_hash": "297c239d778739a0a2a3af4c12da6be8",
+    "semantic_hash": ""
+  },
+  "Imagenes/soporte.webp": {
+    "mtime": 1754680373.8368282,
+    "ast_hash": "8cf8ceb6e001a80f9c95a8c3ff4caab2",
+    "semantic_hash": ""
+  },
+  "Imagenes/telefono.webp": {
+    "mtime": 1754680373.9101725,
+    "ast_hash": "9b04f034fb2c5711039a49067f64c5b6",
+    "semantic_hash": ""
+  },
+  "Imagenes/vercel.svg": {
+    "mtime": 1754680968.4286728,
+    "ast_hash": "c0af2f507b369b085b35ef4bbe3bcf1e",
+    "semantic_hash": ""
+  },
+  "Imagenes/vite.svg": {
+    "mtime": 1754680373.958166,
+    "ast_hash": "534e511d7f9c16f7270a5003dce2b872",
+    "semantic_hash": ""
+  },
+  "Imagenes/window.svg": {
+    "mtime": 1754680968.4286728,
+    "ast_hash": "a2760511c65806022ad20adf74370ff3",
+    "semantic_hash": ""
+  },
+  "Imagenes/video-jabali.mp4": {
+    "mtime": 1754680373.5219526,
+    "ast_hash": "856fff43886ee75a9619cf6d28bbe7ca",
+    "semantic_hash": ""
+  },
+  "src/lib/whatsapp.js": {
+    "mtime": 1790338998.2344441,
+    "ast_hash": "2a7c311ac01bfd1f6f67cc257ea4926a",
+    "semantic_hash": ""
+  },
+  "src/components/ThemeToggle.jsx": {
+    "mtime": 1790339647.1510477,
+    "ast_hash": "df62571ff0089bff6ba5c4f3dc132cbf",
+    "semantic_hash": ""
+  }
+}

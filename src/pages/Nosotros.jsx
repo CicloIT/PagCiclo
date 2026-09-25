@@ -1,7 +1,8 @@
 import { Reveal, Eyebrow, Stat, Tick } from '../components/ui'
 import { useTranslation } from '../context/TranslationContext'
+import { waLink } from '../lib/whatsapp'
 
-export default function Nosotros({ onGo }) {
+export default function Nosotros() {
   const { t } = useTranslation()
 
   const manifesto = [
@@ -234,7 +235,7 @@ export default function Nosotros({ onGo }) {
               <p className="lede" style={{ marginTop: 16 }}>{t('nosotros.cta.lede')}</p>
             </div>
             <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-              <button className="btn btn-primary btn-arrow" onClick={() => onGo('contacto')}>{t('nosotros.cta.btn1')}</button>
+              <a className="btn btn-primary btn-arrow" href={waLink(t('nosotros.wa.proyecto'))} target="_blank" rel="noopener">{t('nosotros.cta.btn1')}</a>
               <a className="btn btn-ghost" href="https://wa.me/5493584314857" target="_blank" rel="noopener">{t('nosotros.cta.btn2')}</a>
             </div>
           </div>

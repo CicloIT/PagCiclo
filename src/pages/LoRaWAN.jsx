@@ -1,5 +1,6 @@
 import { Reveal, Eyebrow, Tick } from '../components/ui'
 import { useTranslation } from '../context/TranslationContext'
+import { waLink } from '../lib/whatsapp'
 
 export default function LoRaWAN({ onGo }) {
   const { t } = useTranslation()
@@ -44,7 +45,7 @@ export default function LoRaWAN({ onGo }) {
                   {t('lorawan.lede')}
                 </p>
                 <div style={{ display: 'flex', gap: 12, marginTop: 32, flexWrap: 'wrap' }}>
-                  <button className="btn btn-primary btn-arrow" onClick={() => onGo('contacto')}>{t('lorawan.cta1')}</button>
+                  <a className="btn btn-primary btn-arrow" href={waLink(t('lorawan.wa.cotizar'))} target="_blank" rel="noopener">{t('lorawan.cta1')}</a>
                   <button className="btn btn-ghost" onClick={() => onGo('jabali')}>{t('lorawan.cta2')}</button>
                 </div>
               </Reveal>
@@ -148,7 +149,7 @@ export default function LoRaWAN({ onGo }) {
               <p className="lede" style={{ marginTop: 16 }}>{t('lorawan.cta.lede')}</p>
             </div>
             <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-              <button className="btn btn-primary btn-arrow" onClick={() => onGo('contacto')}>{t('lorawan.cta.btn1')}</button>
+              <a className="btn btn-primary btn-arrow" href={waLink(t('lorawan.wa.medir'))} target="_blank" rel="noopener">{t('lorawan.cta.btn1')}</a>
               <a className="btn btn-ghost" href="https://wa.me/5493584314857" target="_blank" rel="noopener">{t('lorawan.cta.btn2')}</a>
             </div>
           </div>

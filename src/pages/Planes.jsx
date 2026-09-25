@@ -2,7 +2,9 @@ import { Fragment } from 'react'
 import { Reveal, Eyebrow, Tick, Arrow } from '../components/ui'
 import { useTranslation } from '../context/TranslationContext'
 
-export default function Planes({ onGo }) {
+import { waLink } from '../lib/whatsapp'
+
+export default function Planes() {
   const { t } = useTranslation()
 
   const PLANS = [
@@ -139,13 +141,15 @@ export default function Planes({ onGo }) {
                       <span>{p.sla}</span>
                     </div>
                   </div>
-                  <button
+                  <a
                     className={`btn ${p.featured ? 'btn-primary' : 'btn-ghost'} btn-arrow`}
                     style={{ marginTop: 28, width: '100%', justifyContent: 'center' }}
-                    onClick={() => onGo('contacto')}
+                    href={waLink(`${t('planes.wa.contratar')} ${p.name}`)}
+                    target="_blank"
+                    rel="noopener"
                   >
                     {t('planes.contratar')} {p.name.split(' ')[1]}
-                  </button>
+                  </a>
                   <div className="mono" style={{ fontSize: 11, color: 'var(--text-faint)', marginTop: 14, textAlign: 'center', letterSpacing: '0.06em' }}>
                     {t('planes.pricing')}
                   </div>
@@ -289,7 +293,7 @@ export default function Planes({ onGo }) {
               <p className="lede" style={{ marginTop: 16 }}>{t('planes.cta.lede')}</p>
             </div>
             <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-              <button className="btn btn-primary btn-arrow" onClick={() => onGo('contacto')}>{t('planes.cta.btn1')}</button>
+              <a className="btn btn-primary btn-arrow" href={waLink(t('planes.wa.cotizacion'))} target="_blank" rel="noopener">{t('planes.cta.btn1')}</a>
               <a className="btn btn-ghost" href="https://wa.me/5493584314857" target="_blank" rel="noopener">{t('planes.cta.btn2')}</a>
             </div>
           </div>
