@@ -780,8 +780,8 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "src_components_ui_arrow",
-      "community": 9,
-      "community_name": "Planes.jsx",
+      "community": 3,
+      "community_name": "ui.jsx",
       "norm_label": "arrow()"
     },
     {
@@ -802,8 +802,8 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "src_components_ui_stat",
-      "community": 3,
-      "community_name": "ui.jsx",
+      "community": 9,
+      "community_name": "Planes.jsx",
       "norm_label": "stat()"
     },
     {
@@ -813,8 +813,8 @@
       "source_location": "L61",
       "_origin": "ast",
       "id": "src_components_ui_tick",
-      "community": 3,
-      "community_name": "ui.jsx",
+      "community": 11,
+      "community_name": "LoRaWAN.jsx",
       "norm_label": "tick()"
     },
     {
@@ -1110,8 +1110,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_pages_lorawan",
-      "community": 3,
-      "community_name": "ui.jsx",
+      "community": 11,
+      "community_name": "LoRaWAN.jsx",
       "norm_label": "lorawan.jsx"
     },
     {
@@ -1121,8 +1121,8 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_pages_lorawan_lorawan",
-      "community": 3,
-      "community_name": "ui.jsx",
+      "community": 11,
+      "community_name": "LoRaWAN.jsx",
       "norm_label": "lorawan()"
     },
     {
@@ -1132,8 +1132,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_pages_nosotros",
-      "community": 3,
-      "community_name": "ui.jsx",
+      "community": 9,
+      "community_name": "Planes.jsx",
       "norm_label": "nosotros.jsx"
     },
     {
@@ -1143,8 +1143,8 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_pages_nosotros_nosotros",
-      "community": 3,
-      "community_name": "ui.jsx",
+      "community": 9,
+      "community_name": "Planes.jsx",
       "norm_label": "nosotros()"
     },
     {
@@ -1154,8 +1154,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_pages_planes",
-      "community": 9,
-      "community_name": "Planes.jsx",
+      "community": 3,
+      "community_name": "ui.jsx",
       "norm_label": "planes.jsx"
     },
     {
@@ -1165,8 +1165,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_pages_planes_planes",
-      "community": 9,
-      "community_name": "Planes.jsx",
+      "community": 3,
+      "community_name": "ui.jsx",
       "norm_label": "planes()"
     },
     {
@@ -1198,8 +1198,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_pages_servicios",
-      "community": 8,
-      "community_name": "waLink",
+      "community": 3,
+      "community_name": "ui.jsx",
       "norm_label": "servicios.jsx"
     },
     {
@@ -1209,8 +1209,8 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_pages_servicios_servicios",
-      "community": 8,
-      "community_name": "waLink",
+      "community": 3,
+      "community_name": "ui.jsx",
       "norm_label": "servicios()"
     },
     {
@@ -4195,7 +4195,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/pages/Servicios.jsx",
-      "source_location": "L211",
+      "source_location": "L212",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_pages_servicios_servicios",
@@ -4425,5 +4425,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "b12ea47ed0a82cbcb4ef8afa88a3f8ca176cfc2a"
+  "built_at_commit": "7ba5be33d5b644c378030cf6319fa6112227b8fd"
 }

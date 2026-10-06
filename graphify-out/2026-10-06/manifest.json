@@ -75,13 +75,13 @@
     "semantic_hash": ""
   },
   "src/locales/en.json": {
-    "mtime": 1791294469.9207907,
-    "ast_hash": "434c1cba6efc467b00a33cbd0695447a",
+    "mtime": 1790344117.3618302,
+    "ast_hash": "86022a09be2fa4c548d7536ff4c315d6",
     "semantic_hash": ""
   },
   "src/locales/es.json": {
-    "mtime": 1791294469.7209682,
-    "ast_hash": "e2e67ea9c6df74bcae973256c23789f7",
+    "mtime": 1790344117.2993827,
+    "ast_hash": "821ee097a134bfa3a4f6c3735a7f3e53",
     "semantic_hash": ""
   },
   "src/locales/jabali_en.json": {
@@ -155,8 +155,8 @@
     "semantic_hash": ""
   },
   "src/pages/Servicios.jsx": {
-    "mtime": 1791294509.2185235,
-    "ast_hash": "ff8d7e5be91e35d338bd1eb5332ceddf",
+    "mtime": 1790339011.9544387,
+    "ast_hash": "36c498579dd98e768cbc069b9e1ad103",
     "semantic_hash": ""
   },
   "src/pages/Starlink.jsx": {

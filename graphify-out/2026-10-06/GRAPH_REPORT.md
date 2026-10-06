@@ -1,16 +1,16 @@
-# Graph Report - CicloIt  (2026-10-06)
+# Graph Report - CicloIt  (2026-09-25)
 
 ## Corpus Check
-- 38 files · ~739,821 words
+- 38 files · ~734,445 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 116 nodes · 268 edges · 11 communities (9 shown, 2 thin omitted)
+- 116 nodes · 268 edges · 12 communities (9 shown, 3 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `b12ea47e`
+- Built from commit: `7ba5be33`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -24,6 +24,7 @@
 - waLink
 - Planes.jsx
 - Home.jsx
+- LoRaWAN.jsx
 
 ## God Nodes (most connected - your core abstractions)
 1. `useTranslation()` - 44 edges
@@ -52,7 +53,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (11 total, 2 thin omitted)
+## Communities (12 total, 3 thin omitted)
 
 ### Community 0 - "TranslationContext.jsx"
 Cohesion: 0.12
@@ -67,8 +68,8 @@ Cohesion: 0.10
 Nodes (20): lucide-react, author, dependencies, lucide-react, react, react-dom, react-router-dom, description (+12 more)
 
 ### Community 3 - "ui.jsx"
-Cohesion: 0.33
-Nodes (6): Reveal(), Stat(), Tick(), useReveal(), LoRaWAN(), Nosotros()
+Cohesion: 0.36
+Nodes (5): Arrow(), Reveal(), useReveal(), Planes(), Servicios()
 
 ### Community 4 - "devDependencies"
 Cohesion: 0.15
@@ -79,18 +80,18 @@ Cohesion: 0.33
 Nodes (4): App(), Eyebrow(), Contacto(), Privacidad()
 
 ### Community 8 - "waLink"
-Cohesion: 0.46
-Nodes (4): waLink(), Cursos(), Servicios(), Starlink()
+Cohesion: 0.60
+Nodes (3): waLink(), Cursos(), Starlink()
 
 ## Knowledge Gaps
 - **29 isolated node(s):** `name`, `version`, `description`, `main`, `dev` (+24 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `useTranslation()` connect `useTranslation` to `TranslationContext.jsx`, `ui.jsx`, `Nav.jsx`, `waLink`, `Planes.jsx`, `Home.jsx`?**
+- **Why does `useTranslation()` connect `useTranslation` to `TranslationContext.jsx`, `ui.jsx`, `Nav.jsx`, `waLink`, `Planes.jsx`, `Home.jsx`, `LoRaWAN.jsx`?**
   _High betweenness centrality (0.182) - this node is a cross-community bridge._
 - **Why does `devDependencies` connect `devDependencies` to `package.json`?**
   _High betweenness centrality (0.048) - this node is a cross-community bridge._

@@ -7,29 +7,16 @@ export default function Servicios({ onGo }) {
 
   const SERVICIOS = [
     {
-      id: 'soporte', n: '01', title: t('svc.soporte.title'),
-      img: '/soporte.webp',
-      short: t('svc.soporte.short'),
-      body: t('svc.soporte.body'),
-      bullets: [t('svc.soporte.b1'), t('svc.soporte.b2'), t('svc.soporte.b3'), t('svc.soporte.b4')],
-      tags: ['Infraestructura', 'Networking', 'Help desk'],
-      cta: 'planes',
-    },
-    {
-      id: 'web', n: '02', title: t('svc.web.title'),
-      img: '/pag.webp',
-      short: t('svc.web.short'),
-      body: t('svc.web.body'),
-      bullets: [t('svc.web.b1'), t('svc.web.b2'), t('svc.web.b3'), t('svc.web.b4')],
-      tags: ['Frontend', 'SEO', 'CMS'],
-    },
-    {
-      id: 'games', n: '03', title: t('svc.games.title'),
+      id: 'games', n: '01', title: t('svc.games.title'),
+      featured: true,
       img: '/juegos.webp',
       short: t('svc.games.short'),
       body: t('svc.games.body'),
       bullets: [t('svc.games.b1'), t('svc.games.b2'), t('svc.games.b3'), t('svc.games.b4')],
-      tags: ['Gamificación', 'Eventos', 'Educación'],
+      tags: ['Gamificación', 'Expos', 'Eventos'],
+      catalog: [1, 2, 3, 4, 5, 6].map(i => ({ name: t(`svc.games.c${i}.name`), desc: t(`svc.games.c${i}.desc`) })),
+      uses: [1, 2, 3, 4, 5].map(i => t(`svc.games.u${i}`)),
+      wa: t('svc.games.wa'),
       links: [
         { label: 'Agda', url: 'https://agda.cicloit.com' },
         { label: 'Trivia', url: 'https://trivia.cicloit.com/' },
@@ -38,6 +25,23 @@ export default function Servicios({ onGo }) {
         { label: 'AgronomyTech', url: 'https://cicloit.github.io/AgronomyTech/' },
         { label: 'Puntal', url: 'https://cicloit.github.io/puntal/' },
       ],
+    },
+    {
+      id: 'soporte', n: '02', title: t('svc.soporte.title'),
+      img: '/soporte.webp',
+      short: t('svc.soporte.short'),
+      body: t('svc.soporte.body'),
+      bullets: [t('svc.soporte.b1'), t('svc.soporte.b2'), t('svc.soporte.b3'), t('svc.soporte.b4')],
+      tags: ['Infraestructura', 'Networking', 'Help desk'],
+      cta: 'planes',
+    },
+    {
+      id: 'web', n: '03', title: t('svc.web.title'),
+      img: '/pag.webp',
+      short: t('svc.web.short'),
+      body: t('svc.web.body'),
+      bullets: [t('svc.web.b1'), t('svc.web.b2'), t('svc.web.b3'), t('svc.web.b4')],
+      tags: ['Frontend', 'SEO', 'CMS'],
     },
     {
       id: 'software', n: '04', title: t('svc.software.title'),
@@ -87,10 +91,10 @@ export default function Servicios({ onGo }) {
 
   return (
     <main className="page">
-      <title>Servicios — CicloIT | Soporte IT, Software, Ciberseguridad, Starlink, LoRaWAN</title>
-      <meta name="description" content="Soporte IT, desarrollo web y apps, ciberseguridad, instalación Starlink y redes LoRaWAN en Río Cuarto, Córdoba. Soluciones tecnológicas a medida para empresas." />
+      <title>Servicios — CicloIT | Juegos interactivos para eventos, Soporte IT, Software, Starlink, LoRaWAN</title>
+      <meta name="description" content="Juegos interactivos para expos y eventos (memotest, trivias, ruletas, rasca y gana), soporte IT, desarrollo web y apps, ciberseguridad, Starlink y LoRaWAN en Río Cuarto, Córdoba." />
       <meta property="og:title" content="Servicios — CicloIT" />
-      <meta property="og:description" content="Soporte IT, desarrollo web y apps, ciberseguridad, Starlink y LoRaWAN en Río Cuarto, Córdoba." />
+      <meta property="og:description" content="Juegos interactivos para eventos, soporte IT, desarrollo web y apps, ciberseguridad, Starlink y LoRaWAN en Río Cuarto, Córdoba." />
       <meta property="og:url" content="https://cicloit.com/servicios" />
       <meta property="og:type" content="website" />
       <link rel="canonical" href="https://cicloit.com/servicios" />
@@ -143,8 +147,8 @@ export default function Servicios({ onGo }) {
         <div className="container">
           <div className="srv-cards">
             {SERVICIOS.map((s, i) => (
-              <Reveal key={s.id} delay={(i % 2) * 60}>
-                <article id={s.id} className="srv-card-full">
+              <Reveal key={s.id} delay={(i % 2) * 60} className={s.featured ? 'srv-featured-wrap' : undefined}>
+                <article id={s.id} className={`srv-card-full${s.featured ? ' srv-card-featured' : ''}`}>
                   <div className="srv-card-full-visual img-wrap">
                     <img
                       src={s.img}
@@ -160,6 +164,7 @@ export default function Servicios({ onGo }) {
                     <div className="srv-card-full-head">
                       <span className="mono" style={{ fontSize: 11, color: 'var(--text-faint)', letterSpacing: '0.08em' }}>{s.n} / 08</span>
                       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+                        {s.featured && <span className="tag srv-featured-badge">{t('svc.featured')}</span>}
                         {s.tags.map(tg => <span key={tg} className="tag">{tg}</span>)}
                       </div>
                     </div>
@@ -169,11 +174,41 @@ export default function Servicios({ onGo }) {
                     <ul className="srv-bullets">
                       {s.bullets.map(b => <li key={b}><Tick />{b}</li>)}
                     </ul>
+                    {s.catalog && (
+                      <>
+                        <div className="mono srv-sub">{t('svc.games.catalogTitle')}</div>
+                        <div className="srv-catalog">
+                          {s.catalog.map(c => (
+                            <div key={c.name} className="srv-catalog-item">
+                              <span className="srv-catalog-dot" />
+                              <div>
+                                <div className="srv-catalog-name">{c.name}</div>
+                                <p className="muted" style={{ marginTop: 4, fontSize: 13 }}>{c.desc}</p>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </>
+                    )}
+                    {s.uses && (
+                      <>
+                        <div className="mono srv-sub">{t('svc.games.usesTitle')}</div>
+                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 10 }}>
+                          {s.uses.map(u => <span key={u} className="tag">{u}</span>)}
+                        </div>
+                      </>
+                    )}
+                    {s.featured && s.links && <div className="mono srv-sub">{t('svc.games.demos')}</div>}
                     {s.links && (
-                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: 18 }}>
+                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: s.featured ? 10 : 18 }}>
                         {s.links.map(l => (
                           <a key={l.url} href={l.url} target="_blank" rel="noopener" className="tag">{l.label}</a>
                         ))}
+                      </div>
+                    )}
+                    {s.wa && (
+                      <div style={{ marginTop: 28 }}>
+                        <a className="btn btn-primary btn-arrow" href={waLink(s.wa)} target="_blank" rel="noopener">{t('svc.games.cta')}</a>
                       </div>
                     )}
                     {s.cta && (
@@ -196,7 +231,24 @@ export default function Servicios({ onGo }) {
           .srv-card-full-head{ display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
           .srv-bullets{ list-style: none; padding: 0; margin: 20px 0 0; display: flex; flex-direction: column; gap: 10px; font-size: 14px; }
           .srv-bullets li{ display: flex; align-items: center; gap: 10px; color: var(--text-muted); }
-          @media (max-width: 900px){ .srv-cards{ grid-template-columns: 1fr; } }
+          .srv-featured-wrap{ grid-column: 1 / -1; }
+          .srv-card-featured{ display: grid; grid-template-columns: 1fr 1.2fr; border-color: var(--primary); box-shadow: 0 0 0 4px var(--primary-soft); }
+          .srv-card-featured .srv-card-full-visual{ aspect-ratio: auto; height: 100%; display: flex; align-items: center; background: linear-gradient(160deg, #00595b 0%, #00706f 55%, #009a93 100%); }
+          .srv-card-featured .srv-card-full-visual .img-cover{ height: auto; aspect-ratio: 16/9; object-fit: contain; }
+          .srv-card-featured .srv-card-full-body{ padding: 36px; }
+          .srv-featured-badge{ background: var(--primary); color: var(--bg); border-color: var(--primary); }
+          .srv-sub{ margin-top: 26px; font-size: 11px; color: var(--text-faint); letter-spacing: 0.08em; text-transform: uppercase; }
+          .srv-catalog{ margin-top: 12px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 24px; }
+          .srv-catalog-item{ display: flex; gap: 12px; align-items: flex-start; }
+          .srv-catalog-dot{ flex: none; margin-top: 7px; width: 8px; height: 8px; border-radius: 999px; background: var(--primary); box-shadow: 0 0 0 4px var(--primary-soft); }
+          .srv-catalog-name{ font-size: 15px; font-weight: 500; }
+          @media (max-width: 900px){
+            .srv-cards{ grid-template-columns: 1fr; }
+            .srv-card-featured{ grid-template-columns: 1fr; }
+            .srv-card-featured .srv-card-full-visual{ aspect-ratio: 16/9; height: auto; }
+            .srv-card-featured .srv-card-full-body{ padding: 28px; }
+            .srv-catalog{ grid-template-columns: 1fr; }
+          }
         `}</style>
       </section>
 
